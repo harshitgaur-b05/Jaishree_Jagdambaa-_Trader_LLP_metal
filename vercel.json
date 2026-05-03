@@ -1,5 +1,11 @@
 {
-  "buildCommand": "cd steel-client && npm run build",
+  "buildCommand": "cd steel-client && npm install && npm run build",
   "outputDirectory": "steel-client/.next",
-  "installCommand": "cd steel-client && npm install"
+  "framework": "nextjs",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/$1"
+    }
+  ]
 }
