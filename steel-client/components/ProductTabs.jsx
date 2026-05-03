@@ -23,13 +23,13 @@ export default function ProductTabs({ initialProducts, filteredProducts, totalCo
   return (
     <div className="w-full">
       {/* Tab Headers */}
-      <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-10">
+      <div className="flex overflow-x-auto no-scrollbar md:flex-wrap md:justify-center gap-2 md:gap-4 mb-10 pb-2">
         {tabs.map((tab) => (
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
             className={`
-              flex items-center gap-2 px-6 py-3 rounded-full font-bold transition-all duration-300
+              flex items-center gap-2 px-6 py-3 rounded-full font-bold transition-all duration-300 whitespace-nowrap flex-shrink-0
               ${activeTab === tab.id 
                 ? 'bg-[#007f5f] text-white shadow-lg shadow-emerald-900/20 scale-105' 
                 : 'bg-white dark:bg-white/5 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-white/10 hover:border-[#007f5f]/50'}

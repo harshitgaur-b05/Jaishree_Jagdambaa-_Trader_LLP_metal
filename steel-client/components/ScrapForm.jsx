@@ -11,6 +11,8 @@ const CATEGORIES = [
   'Other'
 ];
 
+const WA_NUMBER = process.env.NEXT_PUBLIC_WA_NUMBER || '919999999999';
+
 export default function ScrapForm() {
   const [formData, setFormData] = useState({
     name: '',
@@ -35,14 +37,32 @@ export default function ScrapForm() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    // Construct WhatsApp message
+    const message = `*NEW SCRAP SALE ENQUIRY*
+----------------------------
+*Name:* ${formData.name}
+*Category:* ${formData.category}
+*Quantity:* ${formData.quantity} KG
+*Phone:* ${formData.phone}
+*Email:* ${formData.email || 'N/A'}
+
+*Pickup Location:*
+*State:* ${formData.state}
+*City:* ${formData.city}
+*Pincode:* ${formData.pincode}
+----------------------------
+Sent from: Industrial Solutions Portal`;
+
+    const waUrl = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
     
-    console.log('Scrap Sale Data:', formData);
+    // Simulate a brief delay for UX
+    await new Promise(resolve => setTimeout(resolve, 800));
+    
+    // Open WhatsApp
+    window.open(waUrl, '_blank');
+    
     setIsSubmitting(false);
     setSubmitted(true);
-    
-    // Reset form or show success message
   };
 
   if (submitted) {

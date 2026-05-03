@@ -28,6 +28,26 @@ export function getCartWALink(cartItems) {
 }
 
 /**
+ * Bundled enquiry cart with customer details WhatsApp link
+ */
+export function getCartWithDetailsWALink(cartItems, { name, email, phone }) {
+  const lines = cartItems
+    .map((item, i) => `${i + 1}. ${item.name} - ${item.dimension}`)
+    .join('\n');
+  const message = `*NEW PRODUCT ENQUIRY*
+----------------------------
+*Name/Company:* ${name}
+*Phone:* ${phone}
+*Email:* ${email || 'N/A'}
+----------------------------
+*Products Requested:*
+${lines}
+
+Please share best prices and availability. Thank you.`;
+  return getWhatsAppLink(message);
+}
+
+/**
  * Contact form WhatsApp link
  */
 export function getContactFormWALink({ name, phone, message }) {

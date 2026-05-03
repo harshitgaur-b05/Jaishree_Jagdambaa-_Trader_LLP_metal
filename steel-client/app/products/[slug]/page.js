@@ -25,31 +25,7 @@ export async function generateMetadata({ params }) {
   };
 }
 
-function ProductImageOrPlaceholder({ product }) {
-  const initials = product.name
-    .trim()
-    .split(/\s+/)
-    .slice(0, 2)
-    .map((w) => w[0].toUpperCase())
-    .join('');
-
-  return (
-    <div className="relative w-full aspect-video md:aspect-square rounded-2xl overflow-hidden bg-slate-50 dark:bg-[#121212] flex items-center justify-center border border-slate-200 dark:border-white/5 transition-colors duration-300">
-      <img
-        src={product.image}
-        alt={product.name}
-        className="w-full h-full object-cover opacity-90"
-        onError={(e) => {
-          e.target.style.display = 'none';
-          e.target.nextSibling.style.display = 'flex';
-        }}
-      />
-      <div className="hidden absolute inset-0 items-center justify-center">
-        <span className="text-7xl font-bold text-[#10b981] tracking-widest opacity-50">{initials}</span>
-      </div>
-    </div>
-  );
-}
+import ProductImage from './ProductImage';
 
 export default async function ProductDetailPage({ params }) {
   const { slug } = await params;
@@ -81,7 +57,7 @@ export default async function ProductDetailPage({ params }) {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
           {/* Image */}
           <div>
-            <ProductImageOrPlaceholder product={product} />
+            <ProductImage product={product} />
           </div>
 
           {/* Details */}

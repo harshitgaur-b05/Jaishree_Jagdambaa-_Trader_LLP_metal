@@ -128,3 +128,54 @@
     @apply font-sans;
   }
 }
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .animate-metal-shimmer {
+    background: linear-gradient(
+      110deg,
+      #ffffff 0%,
+      #e2e8f0 35%,
+      #cbd5e1 50%,
+      #e2e8f0 65%,
+      #ffffff 100%
+    );
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: metal-shimmer 8s linear infinite;
+  }
+
+  .animate-brand-shimmer {
+    background: linear-gradient(
+      110deg,
+      #10b981 0%,
+      #34d399 35%,
+      #ffffff 50%,
+      #34d399 65%,
+      #10b981 100%
+    );
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: metal-shimmer 6s linear infinite;
+  }
+}
+
+@keyframes metal-shimmer {
+  from {
+    background-position: 200% center;
+  }
+  to {
+    background-position: 0% center;
+  }
+}

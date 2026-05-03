@@ -4,6 +4,8 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ThemeToggle } from '@/components/ThemeToggle';
+import { useEnquiryCart } from '@/components/EnquiryCart';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const COMPANY = process.env.NEXT_PUBLIC_COMPANY_NAME || 'Jaishree Jagdambaa Trader LLP';
 const WA_NUMBER = process.env.NEXT_PUBLIC_WA_NUMBER || '919999999999';
@@ -17,21 +19,22 @@ const NAV_LINKS = [
 export default function Navbar() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { cart, toggleCart } = useEnquiryCart();
 
   return (
     <header className="bg-white dark:bg-[#121212] border-b border-slate-200 dark:border-white/10 sticky top-0 z-40 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 md:px-8 h-16 flex items-center justify-between gap-4">
         {/* Logo + name */}
-        <Link href="/" className="flex items-center gap-2.5 flex-shrink-0">
+        <Link href="/" className="flex items-center gap-1.5 sm:gap-2.5 flex-shrink-0">
           {/* Steel beam icon */}
-          <div className="w-8 h-8 bg-[#10b981] rounded-lg flex items-center justify-center">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-white dark:text-[#121212]">
+          <div className="w-7 h-7 sm:w-8 sm:h-8 bg-[#10b981] rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white dark:text-[#121212]">
               <rect x="2" y="3" width="20" height="4" rx="1"/>
               <rect x="2" y="17" width="20" height="4" rx="1"/>
               <rect x="10" y="7" width="4" height="10" rx="1"/>
             </svg>
           </div>
-          <span className="text-slate-900 dark:text-white font-bold text-base tracking-tight leading-none uppercase">
+          <span className="text-slate-900 dark:text-white font-bold text-[11px] sm:text-sm md:text-base tracking-tight leading-none uppercase max-w-[120px] sm:max-w-none truncate">
             {COMPANY}
           </span>
         </Link>
@@ -56,9 +59,53 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* Right: Theme Toggle + WA button + hamburger */}
+        {/* Right: Theme Toggle + Cart + WA button + hamburger */}
         <div className="flex items-center gap-2 md:gap-3">
           <ThemeToggle />
+
+          {/* Animated Cart Toggle */}
+          <motion.button
+            onClick={toggleCart}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            animate={cart.length > 0 ? {
+              scale: [1, 1.05, 1],
+              rotate: [0, -5, 5, 0]
+            } : {}}
+            transition={cart.length > 0 ? {
+              duration: 2,
+              repeat: Infinity,
+              repeatType: "reverse",
+              ease: "easeInOut"
+            } : {}}
+            className="relative p-2 text-slate-600 dark:text-slate-300 hover:text-[#10b981] dark:hover:text-[#10b981] transition-colors"
+            aria-label="Toggle enquiry cart"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+            </svg>
+            
+            <AnimatePresence>
+              {cart.length > 0 && (
+                <motion.span
+                  key="cart-badge"
+                  initial={{ scale: 0, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  exit={{ scale: 0, opacity: 0 }}
+                  className="absolute top-1 right-1 bg-red-500 text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center shadow-sm"
+                >
+                  <motion.span
+                    key={cart.length}
+                    initial={{ y: -10, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    className="inline-block"
+                  >
+                    {cart.length}
+                  </motion.span>
+                </motion.span>
+              )}
+            </AnimatePresence>
+          </motion.button>
 
           {/* WhatsApp CTA */}
           <a
