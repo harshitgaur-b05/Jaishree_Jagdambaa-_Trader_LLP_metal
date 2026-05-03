@@ -5,7 +5,7 @@ import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 import { getCategories, getSubCategories, getTypes, getDimensions } from '@/lib/products';
 
 const SELECT_CLS =
-  'bg-[#1e3a5f] text-white border border-[#2d5a8e] rounded-md px-3 py-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-[#3b82f6] appearance-none cursor-pointer';
+  'bg-white dark:bg-[#121212] text-slate-900 dark:text-slate-200 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-2.5 text-sm w-full focus:outline-none focus:ring-2 focus:ring-[#10b981] appearance-none cursor-pointer hover:border-[#10b981]/50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed';
 
 export default function FilterBar({ totalCount, filteredCount }) {
   const router = useRouter();
@@ -59,12 +59,12 @@ export default function FilterBar({ totalCount, filteredCount }) {
   }
 
   return (
-    <div className="bg-[#0f172a] border-b border-[#1e3a5f] py-4 px-4 md:px-8 sticky top-16 z-30">
+    <div className="bg-white dark:bg-[#121212] border-b border-slate-200 dark:border-white/5 py-6 px-4 md:px-8 sticky top-16 z-30 shadow-sm dark:shadow-lg transition-colors duration-300">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-wrap gap-3 items-end">
           {/* Category */}
           <div className="flex flex-col gap-1 min-w-[160px] flex-1">
-            <label className="text-xs text-slate-400 font-medium uppercase tracking-wide">Category</label>
+            <label className="text-xs text-slate-500 dark:text-slate-400 font-medium uppercase tracking-wide">Category</label>
             <div className="relative">
               <select className={SELECT_CLS} value={category} onChange={(e) => handleCategory(e.target.value)}>
                 <option value="">All Categories</option>
@@ -72,13 +72,13 @@ export default function FilterBar({ totalCount, filteredCount }) {
                   <option key={c} value={c}>{c}</option>
                 ))}
               </select>
-              <span className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 text-xs">▼</span>
+              <span className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-400 text-xs">▼</span>
             </div>
           </div>
 
           {/* Sub-Category */}
           <div className="flex flex-col gap-1 min-w-[160px] flex-1">
-            <label className="text-xs text-slate-400 font-medium uppercase tracking-wide">Sub-Category</label>
+            <label className="text-xs text-slate-500 dark:text-slate-400 font-medium uppercase tracking-wide">Sub-Category</label>
             <div className="relative">
               <select
                 className={SELECT_CLS}
@@ -91,13 +91,13 @@ export default function FilterBar({ totalCount, filteredCount }) {
                   <option key={s} value={s}>{s}</option>
                 ))}
               </select>
-              <span className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 text-xs">▼</span>
+              <span className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-400 text-xs">▼</span>
             </div>
           </div>
 
           {/* Type */}
           <div className="flex flex-col gap-1 min-w-[140px] flex-1">
-            <label className="text-xs text-slate-400 font-medium uppercase tracking-wide">Type</label>
+            <label className="text-xs text-slate-500 dark:text-slate-400 font-medium uppercase tracking-wide">Type</label>
             <div className="relative">
               <select
                 className={SELECT_CLS}
@@ -110,13 +110,13 @@ export default function FilterBar({ totalCount, filteredCount }) {
                   <option key={t} value={t}>{t}</option>
                 ))}
               </select>
-              <span className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 text-xs">▼</span>
+              <span className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-400 text-xs">▼</span>
             </div>
           </div>
 
           {/* Dimension */}
           <div className="flex flex-col gap-1 min-w-[140px] flex-1">
-            <label className="text-xs text-slate-400 font-medium uppercase tracking-wide">Dimension</label>
+            <label className="text-xs text-slate-500 dark:text-slate-400 font-medium uppercase tracking-wide">Dimension</label>
             <div className="relative">
               <select
                 className={SELECT_CLS}
@@ -129,7 +129,7 @@ export default function FilterBar({ totalCount, filteredCount }) {
                   <option key={d} value={d}>{d}</option>
                 ))}
               </select>
-              <span className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 text-xs">▼</span>
+              <span className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-400 text-xs">▼</span>
             </div>
           </div>
 
@@ -138,7 +138,7 @@ export default function FilterBar({ totalCount, filteredCount }) {
             <label className="text-xs text-transparent font-medium uppercase tracking-wide select-none">-</label>
             <button
               onClick={handleClear}
-              className="px-4 py-2 text-sm bg-[#1e3a5f] hover:bg-[#2d5a8e] text-white rounded-md border border-[#2d5a8e] transition-colors whitespace-nowrap"
+              className="px-6 py-2.5 text-sm font-bold bg-slate-50 dark:bg-[#10b981]/10 hover:bg-[#10b981] text-[#10b981] hover:text-white dark:hover:text-[#121212] rounded-xl border border-[#10b981]/30 hover:border-transparent transition-all duration-300 whitespace-nowrap"
             >
               Clear Filters
             </button>
@@ -146,8 +146,8 @@ export default function FilterBar({ totalCount, filteredCount }) {
         </div>
 
         {/* Count */}
-        <div className="mt-3 text-sm text-slate-400">
-          Showing <span className="text-white font-semibold">{filteredCount}</span> of {totalCount} products
+        <div className="mt-3 text-sm text-slate-600 dark:text-slate-400">
+          Showing <span className="text-slate-900 dark:text-white font-semibold">{filteredCount}</span> of {totalCount} products
         </div>
       </div>
     </div>

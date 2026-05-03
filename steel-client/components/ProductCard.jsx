@@ -9,8 +9,8 @@ function ProductInitials({ name }) {
   const words = name.trim().split(/\s+/);
   const initials = words.slice(0, 2).map((w) => w[0].toUpperCase()).join('');
   return (
-    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#1e3a5f] to-[#0f172a]">
-      <span className="text-4xl font-bold text-slate-300 tracking-widest">{initials}</span>
+    <div className="w-full h-full flex items-center justify-center bg-slate-50 dark:bg-[#121212] transition-colors duration-300">
+      <span className="text-4xl font-bold text-[#10b981] tracking-widest opacity-50">{initials}</span>
     </div>
   );
 }
@@ -22,49 +22,44 @@ export default function ProductCard({ product }) {
   const inCart = isInCart(product.id);
 
   return (
-    <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow duration-200 flex flex-col group">
+    <div className="bg-white dark:bg-[#18181b] rounded-2xl shadow-md dark:shadow-lg border border-slate-200 dark:border-white/5 overflow-hidden hover:border-[#10b981]/50 transition-all duration-300 flex flex-col group hover:-translate-y-1">
       {/* Image */}
-      <div className="relative h-48 bg-slate-100 overflow-hidden">
+      <div className="relative h-48 bg-slate-50 dark:bg-[#121212] overflow-hidden border-b border-slate-100 dark:border-white/5 transition-colors duration-300">
         {!imgError ? (
           <img
             src={product.image}
             alt={product.name}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100"
             onError={() => setImgError(true)}
           />
         ) : (
           <ProductInitials name={product.name} />
         )}
         {/* Category badge */}
-        <span className="absolute top-3 left-3 bg-[#0f172a] text-white text-xs font-semibold px-2.5 py-1 rounded-full">
+        <span className="absolute top-3 left-3 bg-[#10b981] text-white dark:text-[#121212] text-xs font-bold px-3 py-1.5 rounded-full shadow-sm uppercase tracking-wider transition-colors duration-300">
           {product.category}
         </span>
       </div>
 
       {/* Content */}
-      <div className="flex flex-col flex-1 p-4 gap-3">
+      <div className="flex flex-col flex-1 p-5 gap-4">
         <div>
-          <h3 className="font-bold text-slate-900 text-base leading-tight">{product.name}</h3>
-          <p className="text-sm text-slate-500 mt-0.5">
+          <h3 className="font-bold text-slate-900 dark:text-slate-200 text-lg leading-tight group-hover:text-[#10b981] transition-colors">{product.name}</h3>
+          <p className="text-sm text-slate-500 mt-1">
             {product.dimension} · {product.type}
           </p>
         </div>
 
-        {product.priceRange && (
-          <div className="bg-slate-50 rounded-lg px-3 py-2 border border-slate-100">
-            <span className="text-xs text-slate-400 block leading-none mb-0.5">Price Range</span>
-            <span className="text-sm font-semibold text-[#0f172a]">{product.priceRange}</span>
-          </div>
-        )}
+
 
         {/* Buttons */}
-        <div className="flex flex-col gap-2 mt-auto">
+        <div className="flex flex-col gap-2 mt-auto pt-2">
           <button
             onClick={() => addToCart(product)}
-            className={`w-full text-sm font-medium py-2 rounded-lg border transition-colors duration-150 ${
+            className={`w-full text-sm font-bold py-2.5 rounded-xl border transition-all duration-300 ${
               inCart
-                ? 'bg-emerald-50 border-emerald-300 text-emerald-700 cursor-default'
-                : 'bg-[#0f172a] hover:bg-[#1e3a5f] text-white border-transparent'
+                ? 'bg-[#10b981]/10 border-[#10b981] text-[#10b981] cursor-default'
+                : 'bg-slate-50 dark:bg-white/5 hover:bg-[#10b981] hover:text-white dark:hover:text-[#121212] text-slate-700 dark:text-slate-300 border-slate-200 dark:border-white/10 hover:border-transparent'
             }`}
             disabled={inCart}
           >
@@ -74,7 +69,7 @@ export default function ProductCard({ product }) {
             href={waLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full text-sm font-medium py-2 rounded-lg border border-emerald-500 text-emerald-700 hover:bg-emerald-50 text-center transition-colors duration-150"
+            className="w-full text-sm font-bold py-2.5 rounded-xl bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-white border border-[#25D366]/20 text-center transition-all duration-300"
           >
             <span className="mr-1">💬</span> WhatsApp
           </a>
@@ -83,7 +78,7 @@ export default function ProductCard({ product }) {
         {/* View detail link */}
         <Link
           href={`/products/${product.slug}`}
-          className="text-xs text-[#3b82f6] hover:underline text-center"
+          className="text-xs text-slate-500 hover:text-[#10b981] dark:hover:text-[#10b981] uppercase tracking-wider font-semibold text-center mt-1 transition-colors"
         >
           View Details →
         </Link>

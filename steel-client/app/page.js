@@ -38,42 +38,95 @@ export default function HomePage() {
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────── */}
-      <section className="relative w-full min-h-[600px] flex items-center py-20">
-        {/* Background Image */}
+      <section className="relative w-full min-h-[90vh] flex flex-col items-center justify-center pt-24 pb-20">
+        {/* Background Image & Overlays */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url('/images/heroimage/unnamed.jpg')" }}
         >
-          {/* Subtle overlay to ensure text readability */}
-          <div className="absolute inset-0 bg-black/10"></div>
+          {/* Unified overlay — slightly heavier in light mode for text readability */}
+          <div className="absolute inset-0 bg-black/40 dark:bg-black/55"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30 dark:from-[#18181b]/60 dark:via-transparent dark:to-[#18181b]/80"></div>
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 md:px-8 w-full">
-          {/* Glassmorphism Card */}
-          <div className="max-w-xl bg-white/85 backdrop-blur-lg border border-white/30 p-8 md:p-12 rounded-3xl shadow-xl">
-            <h1 className="text-4xl md:text-[2.75rem] font-bold text-[#1e293b] leading-[1.15] mb-5 tracking-tight">
-              Trusted, Verified, Globally Connected.
+        {/* Main Hero Content — centered for BOTH modes */}
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-8 mt-12 md:mt-20">
+          <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
+
+            {/* Eyebrow tag */}
+            <span className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full border border-white/25 bg-white/10 backdrop-blur-sm text-xs font-semibold text-white/80 uppercase tracking-[0.18em]">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#007f5f] dark:bg-[#10b981] animate-pulse inline-block"></span>
+              Jaishree Jagdambaa Trader LLP
+            </span>
+
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5 tracking-wide uppercase">
+              Your Global Partner in<br/>
+              <span className="text-[#007f5f] dark:text-[#10b981]">Metal Supply,</span> Trade<br/>&amp; Distribution
             </h1>
-            
-            <p className="text-slate-600 text-lg leading-relaxed mb-8">
-              Your fully compliant and accredited partner for worldwide sourcing and distribution.
+
+            <p className="text-white/75 text-base md:text-lg tracking-wide mb-10 max-w-2xl leading-relaxed">
+              Trusted suppliers, merchandisers &amp; domestic traders of steel, MS pipes, TMT bars and scrap — sourcing, processing and delivering essential materials across India and worldwide.
             </p>
 
-            <Link
-              href="/products"
-              className="inline-flex items-center justify-center bg-[#3b7c87] hover:bg-[#2c5e66] text-white font-medium px-8 py-3.5 rounded-lg transition-colors duration-200"
-            >
-              Explore Our Credentials
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4 mb-10">
+              <a
+                href={`https://wa.me/${WA_NUMBER}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-3.5 bg-[#007f5f] hover:bg-[#005f47] dark:bg-[#10b981] dark:hover:bg-[#059669] text-white font-semibold rounded-full transition-colors duration-300 shadow-lg"
+              >
+                Request a Quote
+              </a>
+              <Link
+                href="/products"
+                className="px-8 py-3.5 bg-transparent border border-white/60 text-white hover:bg-white/10 font-medium rounded-full transition-colors duration-300"
+              >
+                Explore Inventory
+              </Link>
+            </div>
+
+            <div className="flex flex-wrap justify-center items-center gap-6 text-sm text-white/80 font-medium tracking-wide">
+              <span className="flex items-center gap-2"><span className="text-[#007f5f] dark:text-[#10b981] text-lg">✓</span> Worldwide Logistics</span>
+              <span className="flex items-center gap-2"><span className="text-[#007f5f] dark:text-[#10b981] text-lg">✓</span> ISRI Certified</span>
+              <span className="flex items-center gap-2"><span className="text-[#007f5f] dark:text-[#10b981] text-lg">✓</span> Ethical Sourcing</span>
+              <span className="flex items-center gap-2"><span className="text-[#007f5f] dark:text-[#10b981] text-lg">✓</span> Pan India Delivery</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Brands We Handle */}
+        <div className="w-full px-4 md:px-8 z-20 hidden md:block mt-16">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex items-center justify-center mb-4">
+              <div className="h-[1px] bg-white/20 flex-1 max-w-[150px]"></div>
+              <span className="mx-4 text-xs font-semibold text-white/50 uppercase tracking-[0.2em]">Brands We Handle</span>
+              <div className="h-[1px] bg-white/20 flex-1 max-w-[150px]"></div>
+            </div>
+            
+            <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-2xl p-4 flex flex-wrap justify-center items-center gap-4 shadow-2xl">
+              {[
+                { name: 'ArcelorMittal', color: 'text-orange-600' },
+                { name: 'TATA STEEL', color: 'text-blue-700' },
+                { name: 'JSW Steel', color: 'text-blue-800' },
+                { name: 'SAIL', color: 'text-sky-800' },
+              ].map((brand) => (
+                <div key={brand.name} className="bg-gradient-to-b from-white to-slate-200 rounded-xl px-6 py-3 flex items-center justify-center min-w-[140px] shadow-sm">
+                  <span className={`font-black text-sm ${brand.color}`}>{brand.name}</span>
+                </div>
+              ))}
+              <div className="bg-transparent border border-white/20 rounded-xl px-6 py-3 flex items-center justify-center min-w-[140px] hover:bg-white/10 transition-colors cursor-pointer">
+                <span className="text-sm text-white/60 font-medium">And More</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ── Certificates ─────────────────────────────────────────── */}
-      <section className="bg-[#f8f9fa] py-16 px-4 md:px-8">
+      <section className="bg-[#f8f9fa] dark:bg-[#121212] py-16 px-4 md:px-8 transition-colors duration-300">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#0f172a] uppercase tracking-wide">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white uppercase tracking-wide">
               Our Verified Compliance & Accreditations
             </h2>
           </div>
@@ -101,9 +154,9 @@ export default function HomePage() {
                 file: 'MSME CERTIFICATE.pdf'
               }
             ].map(({ title, id, file }) => (
-              <div key={title} className="bg-white rounded-xl shadow-sm border border-slate-200 p-5 flex flex-col h-full hover:shadow-md transition-shadow">
+              <div key={title} className="bg-white dark:bg-[#18181b] rounded-xl shadow-sm border border-slate-200 dark:border-white/10 p-5 flex flex-col h-full hover:shadow-md transition-shadow">
                 {/* Certificate Thumbnail Placeholder */}
-                <div className="bg-slate-50 border border-slate-100 rounded-lg p-4 mb-4 flex-grow flex items-center justify-center relative min-h-[160px]">
+                <div className="bg-slate-50 dark:bg-[#121212] border border-slate-100 dark:border-white/5 rounded-lg p-4 mb-4 flex-grow flex items-center justify-center relative min-h-[160px]">
                   <div className="text-center opacity-40">
                     <span className="text-4xl mb-2 block">📄</span>
                     <span className="text-xs font-medium uppercase text-slate-500">Official Document</span>
@@ -115,14 +168,14 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <h3 className="font-bold text-slate-900 text-sm mb-2 leading-snug">{title}</h3>
-                <p className="text-xs text-slate-500 mb-5">Verified ID: <span className="font-mono bg-slate-100 px-1 py-0.5 rounded blur-[2px] select-none">{id}</span></p>
+                <h3 className="font-bold text-slate-900 dark:text-slate-200 text-sm mb-2 leading-snug">{title}</h3>
+                <p className="text-xs text-slate-500 dark:text-slate-400 mb-5">Verified ID: <span className="font-mono bg-slate-100 dark:bg-white/5 px-1 py-0.5 rounded blur-[2px] select-none">{id}</span></p>
 
                 <div className="grid grid-cols-2 gap-2 mt-auto">
                   <a href={`/certificates/${encodeURIComponent(file)}`} target="_blank" rel="noopener noreferrer" className="text-center bg-[#3b7c87] hover:bg-[#2c5e66] text-white text-xs font-medium py-2.5 rounded transition-colors">
                     View Details
                   </a>
-                  <a href={`/certificates/${encodeURIComponent(file)}`} download className="text-center bg-white hover:bg-slate-50 text-slate-600 border border-slate-300 text-xs font-medium py-2.5 rounded transition-colors flex items-center justify-center gap-1">
+                  <a href={`/certificates/${encodeURIComponent(file)}`} download className="text-center bg-white dark:bg-white/5 hover:bg-slate-50 dark:hover:bg-white/10 text-slate-600 dark:text-slate-300 border border-slate-300 dark:border-white/10 text-xs font-medium py-2.5 rounded transition-colors flex items-center justify-center gap-1">
                     Download PDF
                   </a>
                 </div>
@@ -132,73 +185,26 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Partners ─────────────────────────────────────────── */}
-      <section className="bg-[#18181b] py-20 px-4 md:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-3 tracking-tight">
-              Our Happy Partners
-            </h2>
-            <p className="text-slate-300 font-medium">
-              Trusted by teams from around the world
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-            {[
-              { name: 'KAMDHENU', sub: 'STEEL', color: 'text-red-600' },
-              { name: 'TATA', sub: 'STEEL', color: 'text-blue-700' },
-              { name: 'SAIL', sub: 'सेल', color: 'text-sky-800' },
-              { name: 'JINDAL', sub: 'STEEL & POWER', color: 'text-emerald-700' },
-              { name: 'Hi-TECH', sub: 'STEEL PIPES', color: 'text-orange-500' },
-              { name: 'ESSAR', sub: 'STEEL', color: 'text-slate-800' },
-              { name: 'JSW', sub: 'Steel', color: 'text-blue-900' },
-              { name: 'BIRLA', sub: 'TMT STEEL', color: 'text-red-700' },
-              { name: 'VIZAG', sub: 'STEEL', color: 'text-red-600' },
-              { name: 'AMBA SHAKTI', sub: 'GROUP', color: 'text-red-500' },
-              { name: 'APL APOLLO', sub: 'STEEL PIPES', color: 'text-sky-500' },
-              { name: 'JYOTI', sub: 'TMT BARS', color: 'text-orange-600' },
-            ].map(({ name, sub, color }) => (
-              <div 
-                key={name} 
-                className="bg-white rounded-[1.25rem] aspect-[4/3] flex flex-col items-center justify-center p-4 shadow-sm hover:scale-105 transition-transform duration-300 cursor-default"
-              >
-                <div className="flex flex-col items-center justify-center select-none">
-                  <span className={`font-black text-xl md:text-[1.35rem] text-center leading-none ${color}`}>
-                    {name}
-                  </span>
-                  {sub && (
-                    <span className="text-[10px] font-bold text-slate-500 mt-1 text-center uppercase tracking-[0.15em]">
-                      {sub}
-                    </span>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── Categories ─────────────────────────────────────── */}
-      <section className="py-16 px-4 md:px-8 bg-white">
+      <section className="py-20 px-4 md:px-8 bg-yellow-50 dark:bg-[#121212] transition-colors duration-300">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold text-[#0f172a] mb-3">Our Product Range</h2>
-            <p className="text-slate-500 max-w-lg mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-3">Our Product Range</h2>
+            <p className="text-slate-600 dark:text-slate-400 max-w-lg mx-auto">
               Comprehensive steel product catalogue for construction, fabrication, and industrial use.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {CATEGORIES.map(({ name, icon, desc }) => (
               <Link
                 key={name}
                 href={`/products?category=${encodeURIComponent(name)}`}
-                className="group flex items-start gap-4 p-5 rounded-xl border border-slate-200 hover:border-[#3b82f6] hover:shadow-md transition-all duration-200 bg-white"
+                className="group flex items-start gap-4 p-6 rounded-2xl border border-slate-200 dark:border-white/10 hover:border-[#10b981] dark:hover:border-[#10b981] bg-white dark:bg-[#18181b] hover:shadow-md dark:hover:bg-white/5 transition-all duration-300"
               >
-                <span className="text-3xl flex-shrink-0">{icon}</span>
+                <span className="text-3xl flex-shrink-0 opacity-80 group-hover:opacity-100 transition-opacity">{icon}</span>
                 <div>
-                  <h3 className="font-semibold text-slate-900 text-sm group-hover:text-[#3b82f6] transition-colors">{name}</h3>
-                  <p className="text-xs text-slate-400 mt-0.5">{desc}</p>
+                  <h3 className="font-semibold text-slate-900 dark:text-slate-200 text-sm group-hover:text-[#10b981] transition-colors">{name}</h3>
+                  <p className="text-xs text-slate-500 mt-1">{desc}</p>
                 </div>
               </Link>
             ))}
@@ -207,29 +213,29 @@ export default function HomePage() {
       </section>
 
       {/* ── Featured Products ──────────────────────────────── */}
-      <section className="py-16 px-4 md:px-8 bg-slate-50">
+      <section className="py-20 px-4 md:px-8 bg-white dark:bg-[#18181b] transition-colors duration-300">
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-center justify-between mb-8">
-            <div>
-              <h2 className="text-3xl font-bold text-[#0f172a]">Featured Products</h2>
-              <p className="text-slate-500 mt-1 text-sm">Popular picks from our catalogue</p>
+          <div className="flex flex-col sm:flex-row items-center justify-between mb-10 gap-4">
+            <div className="text-center sm:text-left">
+              <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Featured Products</h2>
+              <p className="text-slate-600 dark:text-slate-400 mt-2 text-sm">Popular picks from our catalogue</p>
             </div>
             <Link
               href="/products"
-              className="text-sm text-[#3b82f6] hover:underline font-medium hidden sm:block"
+              className="text-sm text-[#10b981] hover:text-[#059669] border border-[#10b981] hover:bg-[#10b981]/10 px-5 py-2.5 rounded-full font-medium transition-colors hidden sm:block"
             >
               View all products →
             </Link>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {featured.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
-          <div className="mt-8 text-center sm:hidden">
+          <div className="mt-10 text-center sm:hidden">
             <Link
               href="/products"
-              className="text-sm text-[#3b82f6] hover:underline font-medium"
+              className="text-sm text-[#10b981] hover:text-[#059669] border border-[#10b981] hover:bg-[#10b981]/10 px-6 py-3 rounded-full font-medium transition-colors inline-block"
             >
               View all products →
             </Link>
@@ -238,18 +244,21 @@ export default function HomePage() {
       </section>
 
       {/* ── WhatsApp CTA ──────────────────────────────────── */}
-      <section className="bg-[#0f172a] py-16 px-4 md:px-8">
-        <div className="max-w-2xl mx-auto text-center">
-          <div className="text-5xl mb-4">💬</div>
-          <h2 className="text-3xl font-bold text-white mb-4">Get Instant Quotes on WhatsApp</h2>
-          <p className="text-slate-300 mb-8 leading-relaxed">
+      <section className="relative py-24 px-4 md:px-8 overflow-hidden bg-yellow-50 dark:bg-[#121212] transition-colors duration-300">
+        <div className="absolute inset-0 bg-[#10b981] opacity-[0.03] dark:opacity-5"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent dark:from-[#121212] dark:to-[#121212]"></div>
+        
+        <div className="relative max-w-2xl mx-auto text-center z-10">
+          <div className="text-5xl mb-6 opacity-80">💬</div>
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">Get Instant Quotes on WhatsApp</h2>
+          <p className="text-slate-600 dark:text-slate-400 mb-10 leading-relaxed text-lg">
             Skip the forms. Message us directly on WhatsApp for pricing, availability, and delivery info. Our team responds within minutes.
           </p>
           <a
             href={`https://wa.me/${WA_NUMBER}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#1ebe5b] text-white font-bold px-8 py-4 rounded-2xl text-lg transition-colors duration-150 shadow-lg"
+            className="inline-flex items-center justify-center gap-3 bg-[#10b981] hover:bg-[#059669] text-[#121212] font-bold px-8 py-4 rounded-full text-lg transition-colors duration-300 shadow-[0_0_20px_rgba(194,155,116,0.3)] hover:shadow-[0_0_30px_rgba(194,155,116,0.5)]"
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" className="w-6 h-6">
               <path d="M16.003 2.667C8.639 2.667 2.667 8.637 2.667 16c0 2.348.627 4.647 1.814 6.657L2.667 29.333l6.87-1.793A13.29 13.29 0 0 0 16.003 29.333c7.363 0 13.33-5.97 13.33-13.333 0-7.364-5.967-13.333-13.33-13.333zm0 24c-2.028 0-4.02-.549-5.755-1.587l-.413-.247-4.077 1.063 1.09-3.968-.269-.432A10.634 10.634 0 0 1 5.333 16c0-5.882 4.787-10.667 10.67-10.667S26.667 10.118 26.667 16c0 5.883-4.784 10.667-10.664 10.667zm5.858-7.986c-.32-.16-1.894-.933-2.188-1.04-.294-.106-.508-.16-.722.16s-.829 1.04-1.015 1.254c-.187.213-.374.24-.694.08-.32-.16-1.351-.498-2.573-1.587-.95-.847-1.59-1.893-1.777-2.213-.187-.32-.02-.493.14-.653.143-.144.32-.374.48-.56.16-.187.213-.32.32-.534.107-.213.053-.4-.027-.56-.08-.16-.72-1.733-.987-2.373-.26-.62-.524-.536-.72-.546l-.614-.01c-.213 0-.56.08-.853.4-.294.32-1.12 1.093-1.12 2.667s1.147 3.093 1.307 3.307c.16.213 2.254 3.44 5.46 4.827.764.33 1.36.527 1.824.674.766.242 1.465.208 2.017.127.615-.092 1.894-.773 2.16-1.52.267-.747.267-1.387.187-1.52-.08-.133-.294-.213-.614-.373z"/>
@@ -260,10 +269,10 @@ export default function HomePage() {
       </section>
 
       {/* ── Why Us ────────────────────────────────────────── */}
-      <section className="py-16 px-4 md:px-8 bg-white">
+      <section className="py-20 px-4 md:px-8 bg-white dark:bg-[#18181b] transition-colors duration-300">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold text-[#0f172a]">Why Choose Us?</h2>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Why Choose Us?</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -272,10 +281,10 @@ export default function HomePage() {
               { icon: '💰', title: 'Best Prices', desc: 'Competitive market rates. Bulk discount available.' },
               { icon: '🤝', title: 'Dedicated Support', desc: '10+ years of industry experience. WhatsApp support 6 days a week.' },
             ].map(({ icon, title, desc }) => (
-              <div key={title} className="text-center p-6 rounded-xl border border-slate-200">
-                <div className="text-4xl mb-3">{icon}</div>
-                <h3 className="font-bold text-slate-900 mb-2">{title}</h3>
-                <p className="text-sm text-slate-500 leading-relaxed">{desc}</p>
+              <div key={title} className="text-center p-8 rounded-2xl bg-yellow-50 dark:bg-[#121212] border border-slate-100 dark:border-white/5 hover:border-[#10b981]/30 transition-colors duration-300">
+                <div className="text-4xl mb-4 opacity-80">{icon}</div>
+                <h3 className="font-bold text-slate-900 dark:text-slate-200 mb-3">{title}</h3>
+                <p className="text-sm text-slate-600 dark:text-slate-500 leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>

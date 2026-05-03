@@ -9,8 +9,12 @@
     "dimension": "8mm",
     "description": "Standard strength TMT bar suitable for general concrete reinforcement.",
     "priceRange": "₹52,000 - ₹54,000 per MT",
-    "image": "/images/products/tmt-bar.jpg",
-    "tags": ["construction", "rcc", "bar"]
+    "image": "/images/products/tmt-bars.jpg",
+    "tags": [
+      "construction",
+      "rcc",
+      "bar"
+    ]
   },
   {
     "id": "2",
@@ -22,8 +26,12 @@
     "dimension": "10mm",
     "description": "High strength TMT bar suitable for RCC construction in earthquake-prone zones.",
     "priceRange": "₹55,000 - ₹58,000 per MT",
-    "image": "/images/products/tmt-bar.jpg",
-    "tags": ["construction", "rcc", "bar"]
+    "image": "/images/products/tmt-bars.jpg",
+    "tags": [
+      "construction",
+      "rcc",
+      "bar"
+    ]
   },
   {
     "id": "3",
@@ -35,8 +43,12 @@
     "dimension": "12mm",
     "description": "High strength TMT bar widely used in columns and beams.",
     "priceRange": "₹55,000 - ₹58,000 per MT",
-    "image": "/images/products/tmt-bar.jpg",
-    "tags": ["construction", "rcc", "bar"]
+    "image": "/images/products/tmt-bars.jpg",
+    "tags": [
+      "construction",
+      "rcc",
+      "bar"
+    ]
   },
   {
     "id": "4",
@@ -48,8 +60,13 @@
     "dimension": "16mm",
     "description": "Superior strength TMT bar for heavy load structures and high-rises.",
     "priceRange": "₹58,000 - ₹62,000 per MT",
-    "image": "/images/products/tmt-bar.jpg",
-    "tags": ["construction", "rcc", "bar", "heavy-duty"]
+    "image": "/images/products/tmt-bars2.jpg",
+    "tags": [
+      "construction",
+      "rcc",
+      "bar",
+      "heavy-duty"
+    ]
   },
   {
     "id": "5",
@@ -61,8 +78,13 @@
     "dimension": "20mm",
     "description": "Superior strength TMT bar for major infrastructure projects.",
     "priceRange": "₹58,000 - ₹62,000 per MT",
-    "image": "/images/products/tmt-bar.jpg",
-    "tags": ["construction", "rcc", "bar", "infrastructure"]
+    "image": "/images/products/tmt-bars2.jpg",
+    "tags": [
+      "construction",
+      "rcc",
+      "bar",
+      "infrastructure"
+    ]
   },
   {
     "id": "6",
@@ -74,8 +96,12 @@
     "dimension": "1 inch",
     "description": "Mild steel round pipes for scaffolding and fluid transportation.",
     "priceRange": "₹60,000 - ₹65,000 per MT",
-    "image": "/images/products/ms-pipe.jpg",
-    "tags": ["pipe", "plumbing", "scaffolding"]
+    "image": "/images/products/pipes.jpg",
+    "tags": [
+      "pipe",
+      "plumbing",
+      "scaffolding"
+    ]
   },
   {
     "id": "7",
@@ -87,8 +113,11 @@
     "dimension": "2 inch",
     "description": "Medium thickness mild steel round pipes for general fabrication.",
     "priceRange": "₹60,000 - ₹65,000 per MT",
-    "image": "/images/products/ms-pipe.jpg",
-    "tags": ["pipe", "fabrication"]
+    "image": "/images/products/pipes.jpg",
+    "tags": [
+      "pipe",
+      "fabrication"
+    ]
   },
   {
     "id": "8",
@@ -100,8 +129,12 @@
     "dimension": "2x2 inch",
     "description": "Square hollow sections for structural and architectural applications.",
     "priceRange": "₹62,000 - ₹67,000 per MT",
-    "image": "/images/products/ms-square-pipe.jpg",
-    "tags": ["pipe", "square", "structural"]
+    "image": "/images/products/pipes.jpg",
+    "tags": [
+      "pipe",
+      "square",
+      "structural"
+    ]
   },
   {
     "id": "9",
@@ -113,8 +146,12 @@
     "dimension": "4x2 inch",
     "description": "Rectangular hollow sections for gates, grills, and structural frameworks.",
     "priceRange": "₹62,000 - ₹67,000 per MT",
-    "image": "/images/products/ms-rect-pipe.jpg",
-    "tags": ["pipe", "rectangular", "structural"]
+    "image": "/images/products/pipes.jpg",
+    "tags": [
+      "pipe",
+      "rectangular",
+      "structural"
+    ]
   },
   {
     "id": "10",
@@ -126,8 +163,12 @@
     "dimension": "2mm",
     "description": "Hot Rolled steel sheets for industrial fabrication and heavy machinery.",
     "priceRange": "₹56,000 - ₹60,000 per MT",
-    "image": "/images/products/hr-sheet.jpg",
-    "tags": ["sheet", "hot-rolled", "fabrication"]
+    "image": "/images/products/steel_Sheets.webp",
+    "tags": [
+      "sheet",
+      "hot-rolled",
+      "fabrication"
+    ]
   },
   {
     "id": "11",
@@ -139,8 +180,12 @@
     "dimension": "1mm",
     "description": "Cold Rolled sheets with excellent surface finish for auto bodies and appliances.",
     "priceRange": "₹62,000 - ₹68,000 per MT",
-    "image": "/images/products/cr-sheet.jpg",
-    "tags": ["sheet", "cold-rolled", "automotive"]
+    "image": "/images/products/steel_Sheets.webp",
+    "tags": [
+      "sheet",
+      "cold-rolled",
+      "automotive"
+    ]
   },
   {
     "id": "12",
@@ -152,8 +197,12 @@
     "dimension": "0.5mm",
     "description": "Galvanized plain sheets offering high corrosion resistance for roofing and ducting.",
     "priceRange": "₹65,000 - ₹72,000 per MT",
-    "image": "/images/products/gp-sheet.jpg",
-    "tags": ["sheet", "galvanized", "roofing"]
+    "image": "/images/products/steel_Sheets.webp",
+    "tags": [
+      "sheet",
+      "galvanized",
+      "roofing"
+    ]
   },
   {
     "id": "13",
@@ -165,8 +214,12 @@
     "dimension": "25x25x3 mm",
     "description": "MS equal angle for brackets, frames, and general structural use.",
     "priceRange": "₹53,000 - ₹57,000 per MT",
-    "image": "/images/products/angle-iron.jpg",
-    "tags": ["angle", "structural", "frame"]
+    "image": "/images/products/angle_iron.webp",
+    "tags": [
+      "angle",
+      "structural",
+      "frame"
+    ]
   },
   {
     "id": "14",
@@ -178,8 +231,12 @@
     "dimension": "50x50x5 mm",
     "description": "Heavy-duty MS equal angle for trusses and industrial structures.",
     "priceRange": "₹53,000 - ₹57,000 per MT",
-    "image": "/images/products/angle-iron.jpg",
-    "tags": ["angle", "structural", "industrial"]
+    "image": "/images/products/angle_iron.webp",
+    "tags": [
+      "angle",
+      "structural",
+      "industrial"
+    ]
   },
   {
     "id": "15",
@@ -191,8 +248,12 @@
     "dimension": "75x40 mm",
     "description": "Mild steel C-channels used in building construction and structural support.",
     "priceRange": "₹54,000 - ₹58,000 per MT",
-    "image": "/images/products/channel.jpg",
-    "tags": ["channel", "structural", "support"]
+    "image": "/images/products/angle_iron.webp",
+    "tags": [
+      "channel",
+      "structural",
+      "support"
+    ]
   },
   {
     "id": "16",
@@ -204,8 +265,12 @@
     "dimension": "100x50 mm",
     "description": "U-shaped steel channels for heavy structural applications.",
     "priceRange": "₹54,000 - ₹58,000 per MT",
-    "image": "/images/products/channel.jpg",
-    "tags": ["channel", "structural", "heavy-duty"]
+    "image": "/images/products/angle_iron.webp",
+    "tags": [
+      "channel",
+      "structural",
+      "heavy-duty"
+    ]
   },
   {
     "id": "17",
@@ -217,8 +282,12 @@
     "dimension": "25x5 mm",
     "description": "Mild steel flat bars for grills, gates, and industrial grating.",
     "priceRange": "₹52,000 - ₹56,000 per MT",
-    "image": "/images/products/ms-flat.jpg",
-    "tags": ["flat", "fabrication", "grill"]
+    "image": "/images/products/angle_iron.webp",
+    "tags": [
+      "flat",
+      "fabrication",
+      "grill"
+    ]
   },
   {
     "id": "18",
@@ -230,7 +299,45 @@
     "dimension": "12mm",
     "description": "Plain mild steel round bars for general fabrication and dowels.",
     "priceRange": "₹52,000 - ₹56,000 per MT",
-    "image": "/images/products/ms-round.jpg",
-    "tags": ["round", "fabrication", "dowel"]
+    "image": "/images/products/angle_iron.webp",
+    "tags": [
+      "round",
+      "fabrication",
+      "dowel"
+    ]
+  },
+  {
+    "id": "19",
+    "slug": "copper-wire-1.5sqmm",
+    "name": "Copper Wire 1.5 sqmm",
+    "category": "Wires & Cables",
+    "subCategory": "Copper Wire",
+    "type": "Single Core",
+    "dimension": "1.5 sqmm",
+    "description": "Premium quality copper wire for domestic electrical wiring.",
+    "priceRange": "₹2,500 - ₹3,000 per coil",
+    "image": "/images/products/wires.jpg",
+    "tags": [
+      "electrical",
+      "copper",
+      "wiring"
+    ]
+  },
+  {
+    "id": "20",
+    "slug": "armoured-cable-4core-16sqmm",
+    "name": "Armoured Cable 4 Core",
+    "category": "Wires & Cables",
+    "subCategory": "Armoured Cable",
+    "type": "Aluminium",
+    "dimension": "16 sqmm",
+    "description": "Heavy-duty armoured cable for industrial power distribution.",
+    "priceRange": "₹450 - ₹550 per meter",
+    "image": "/images/products/cables.jpg",
+    "tags": [
+      "industrial",
+      "power",
+      "cable"
+    ]
   }
 ]

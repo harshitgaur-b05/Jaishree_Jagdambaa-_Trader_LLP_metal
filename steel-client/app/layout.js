@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import EnquiryCart, { EnquiryCartProvider } from '@/components/EnquiryCart';
+import { ThemeProvider } from '@/components/ThemeProvider';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
@@ -25,15 +26,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className="bg-slate-50 text-slate-900 flex flex-col min-h-screen antialiased">
-        <EnquiryCartProvider>
-          <Navbar />
-          <main className="flex-1">{children}</main>
-          <Footer />
-          <WhatsAppButton />
-          <EnquiryCart />
-        </EnquiryCartProvider>
+    <html lang="en" className={inter.variable} suppressHydrationWarning>
+      <body className="bg-slate-50 dark:bg-[#121212] text-slate-900 dark:text-slate-200 flex flex-col min-h-screen antialiased transition-colors duration-300">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <EnquiryCartProvider>
+            <Navbar />
+            <main className="flex-1">{children}</main>
+            <Footer />
+            <WhatsAppButton />
+            <EnquiryCart />
+          </EnquiryCartProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
