@@ -38,74 +38,141 @@ export default function HomePage() {
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────── */}
-      <section className="relative bg-[#0f172a] overflow-hidden">
-        {/* Background pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: `repeating-linear-gradient(
-                45deg,
-                #3b82f6 0px,
-                #3b82f6 1px,
-                transparent 1px,
-                transparent 40px
-              )`,
-            }}
-          />
+      <section className="relative w-full min-h-[600px] flex items-center py-20">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/images/heroimage/unnamed.jpg')" }}
+        >
+          {/* Subtle overlay to ensure text readability */}
+          <div className="absolute inset-0 bg-black/10"></div>
         </div>
-        <div className="relative max-w-7xl mx-auto px-4 md:px-8 py-24 md:py-36">
-          <div className="max-w-2xl">
-            {/* Badge */}
-            <span className="inline-flex items-center gap-2 bg-[#1e3a5f] text-[#93c5fd] text-xs font-semibold px-3 py-1.5 rounded-full mb-6 border border-[#2d5a8e]">
-              <span className="w-1.5 h-1.5 bg-[#25D366] rounded-full animate-pulse" />
-              Trusted Steel Supplier Since 2010
-            </span>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight mb-6">
-              Quality Steel,
-              <br />
-              <span className="text-[#3b82f6]">On Time.</span>
-              <br />
-              Every Time.
+        <div className="relative max-w-7xl mx-auto px-4 md:px-8 w-full">
+          {/* Glassmorphism Card */}
+          <div className="max-w-xl bg-white/85 backdrop-blur-lg border border-white/30 p-8 md:p-12 rounded-3xl shadow-xl">
+            <h1 className="text-4xl md:text-[2.75rem] font-bold text-[#1e293b] leading-[1.15] mb-5 tracking-tight">
+              Trusted, Verified, Globally Connected.
             </h1>
-
-            <p className="text-slate-300 text-lg leading-relaxed mb-8 max-w-xl">
-              India's trusted source for TMT bars, MS pipes, steel sheets, and structural steel.
-              Competitive prices · Pan India delivery · WhatsApp ordering.
+            
+            <p className="text-slate-600 text-lg leading-relaxed mb-8">
+              Your fully compliant and accredited partner for worldwide sourcing and distribution.
             </p>
 
-            <div className="flex flex-wrap gap-3">
-              <Link
-                href="/products"
-                className="inline-flex items-center gap-2 bg-[#3b82f6] hover:bg-[#2563eb] text-white font-semibold px-6 py-3 rounded-xl transition-colors duration-150 text-sm"
-              >
-                View Products
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                </svg>
-              </Link>
-              <a
-                href={`https://wa.me/${WA_NUMBER}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1ebe5b] text-white font-semibold px-6 py-3 rounded-xl transition-colors duration-150 text-sm"
-              >
-                💬 WhatsApp Us
-              </a>
-            </div>
+            <Link
+              href="/products"
+              className="inline-flex items-center justify-center bg-[#3b7c87] hover:bg-[#2c5e66] text-white font-medium px-8 py-3.5 rounded-lg transition-colors duration-200"
+            >
+              Explore Our Credentials
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* ── Stats ─────────────────────────────────────────── */}
-      <section className="bg-[#1e3a5f] py-10">
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {STATS.map(({ value, label }) => (
-              <div key={label} className="text-center">
-                <p className="text-3xl font-bold text-white mb-1">{value}</p>
-                <p className="text-sm text-slate-300">{label}</p>
+      {/* ── Certificates ─────────────────────────────────────────── */}
+      <section className="bg-[#f8f9fa] py-16 px-4 md:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#0f172a] uppercase tracking-wide">
+              Our Verified Compliance & Accreditations
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                title: 'Certificate of Incorporation - LLP',
+                id: 'XXXXX-XXXX',
+                file: 'Certificate of Incorporation LLP.pdf'
+              },
+              {
+                title: 'GST Registration Certificate',
+                id: '07AAXXXXXXXXXXZ',
+                file: 'GST Certificate LLP.pdf'
+              },
+              {
+                title: 'Import Export Code (IEC) Certificate',
+                id: 'XXXXXXXXXX',
+                file: 'IMPORT EXPORT CERTIFICATE LLP.pdf'
+              },
+              {
+                title: 'MSME Registration Certificate',
+                id: 'UDYAM-XX-XX-XXXXXXX',
+                file: 'MSME CERTIFICATE.pdf'
+              }
+            ].map(({ title, id, file }) => (
+              <div key={title} className="bg-white rounded-xl shadow-sm border border-slate-200 p-5 flex flex-col h-full hover:shadow-md transition-shadow">
+                {/* Certificate Thumbnail Placeholder */}
+                <div className="bg-slate-50 border border-slate-100 rounded-lg p-4 mb-4 flex-grow flex items-center justify-center relative min-h-[160px]">
+                  <div className="text-center opacity-40">
+                    <span className="text-4xl mb-2 block">📄</span>
+                    <span className="text-xs font-medium uppercase text-slate-500">Official Document</span>
+                  </div>
+                  {/* Verified Badge */}
+                  <div className="absolute -bottom-3 -right-2 bg-emerald-50 text-emerald-600 border border-emerald-200 text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1 shadow-sm">
+                    <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                    Verified
+                  </div>
+                </div>
+
+                <h3 className="font-bold text-slate-900 text-sm mb-2 leading-snug">{title}</h3>
+                <p className="text-xs text-slate-500 mb-5">Verified ID: <span className="font-mono bg-slate-100 px-1 py-0.5 rounded blur-[2px] select-none">{id}</span></p>
+
+                <div className="grid grid-cols-2 gap-2 mt-auto">
+                  <a href={`/certificates/${encodeURIComponent(file)}`} target="_blank" rel="noopener noreferrer" className="text-center bg-[#3b7c87] hover:bg-[#2c5e66] text-white text-xs font-medium py-2.5 rounded transition-colors">
+                    View Details
+                  </a>
+                  <a href={`/certificates/${encodeURIComponent(file)}`} download className="text-center bg-white hover:bg-slate-50 text-slate-600 border border-slate-300 text-xs font-medium py-2.5 rounded transition-colors flex items-center justify-center gap-1">
+                    Download PDF
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Partners ─────────────────────────────────────────── */}
+      <section className="bg-[#18181b] py-20 px-4 md:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-3 tracking-tight">
+              Our Happy Partners
+            </h2>
+            <p className="text-slate-300 font-medium">
+              Trusted by teams from around the world
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+            {[
+              { name: 'KAMDHENU', sub: 'STEEL', color: 'text-red-600' },
+              { name: 'TATA', sub: 'STEEL', color: 'text-blue-700' },
+              { name: 'SAIL', sub: 'सेल', color: 'text-sky-800' },
+              { name: 'JINDAL', sub: 'STEEL & POWER', color: 'text-emerald-700' },
+              { name: 'Hi-TECH', sub: 'STEEL PIPES', color: 'text-orange-500' },
+              { name: 'ESSAR', sub: 'STEEL', color: 'text-slate-800' },
+              { name: 'JSW', sub: 'Steel', color: 'text-blue-900' },
+              { name: 'BIRLA', sub: 'TMT STEEL', color: 'text-red-700' },
+              { name: 'VIZAG', sub: 'STEEL', color: 'text-red-600' },
+              { name: 'AMBA SHAKTI', sub: 'GROUP', color: 'text-red-500' },
+              { name: 'APL APOLLO', sub: 'STEEL PIPES', color: 'text-sky-500' },
+              { name: 'JYOTI', sub: 'TMT BARS', color: 'text-orange-600' },
+            ].map(({ name, sub, color }) => (
+              <div 
+                key={name} 
+                className="bg-white rounded-[1.25rem] aspect-[4/3] flex flex-col items-center justify-center p-4 shadow-sm hover:scale-105 transition-transform duration-300 cursor-default"
+              >
+                <div className="flex flex-col items-center justify-center select-none">
+                  <span className={`font-black text-xl md:text-[1.35rem] text-center leading-none ${color}`}>
+                    {name}
+                  </span>
+                  {sub && (
+                    <span className="text-[10px] font-bold text-slate-500 mt-1 text-center uppercase tracking-[0.15em]">
+                      {sub}
+                    </span>
+                  )}
+                </div>
               </div>
             ))}
           </div>
