@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://yourcompany.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://yourcompany.com/products</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://yourcompany.com/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://yourcompany.com/products/tmt-bar-fe-415-8mm</loc><priority>0.8</priority></url>
+  <url><loc>https://yourcompany.com/products/tmt-bar-fe-500-10mm</loc><priority>0.8</priority></url>
+  <url><loc>https://yourcompany.com/products/tmt-bar-fe-500-12mm</loc><priority>0.8</priority></url>
+  <url><loc>https://yourcompany.com/products/tmt-bar-fe-550-16mm</loc><priority>0.8</priority></url>
+  <url><loc>https://yourcompany.com/products/tmt-bar-fe-550-20mm</loc><priority>0.8</priority></url>
+  <url><loc>https://yourcompany.com/products/ms-pipe-round-1inch</loc><priority>0.8</priority></url>
+  <url><loc>https://yourcompany.com/products/ms-pipe-round-2inch</loc><priority>0.8</priority></url>
+  <url><loc>https://yourcompany.com/products/ms-pipe-square-2x2</loc><priority>0.8</priority></url>
+  <url><loc>https://yourcompany.com/products/ms-pipe-rectangular-4x2</loc><priority>0.8</priority></url>
+  <url><loc>https://yourcompany.com/products/steel-sheet-hr-2mm</loc><priority>0.8</priority></url>
+  <url><loc>https://yourcompany.com/products/steel-sheet-cr-1mm</loc><priority>0.8</priority></url>
+  <url><loc>https://yourcompany.com/products/steel-sheet-gp-0.5mm</loc><priority>0.8</priority></url>
+  <url><loc>https://yourcompany.com/products/angle-iron-equal-25x25x3</loc><priority>0.8</priority></url>
+  <url><loc>https://yourcompany.com/products/angle-iron-equal-50x50x5</loc><priority>0.8</priority></url>
+  <url><loc>https://yourcompany.com/products/channel-steel-c-75x40</loc><priority>0.8</priority></url>
+  <url><loc>https://yourcompany.com/products/channel-steel-u-100x50</loc><priority>0.8</priority></url>
+  <url><loc>https://yourcompany.com/products/ms-flat-25x5</loc><priority>0.8</priority></url>
+  <url><loc>https://yourcompany.com/products/ms-round-12mm</loc><priority>0.8</priority></url>
+</urlset>
