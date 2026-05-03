@@ -1,0 +1,5 @@
+{
+  "buildCommand": "cd steel-client && npm run build",
+  "outputDirectory": "steel-client/.next",
+  "installCommand": "cd steel-client && npm install"
+}
