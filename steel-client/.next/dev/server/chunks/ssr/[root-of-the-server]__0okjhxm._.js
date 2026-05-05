@@ -343,7 +343,7 @@ module.exports = [
         "dimension": "1.5 sqmm",
         "description": "Premium quality copper wire for domestic electrical wiring.",
         "priceRange": "₹2,500 - ₹3,000 per coil",
-        "image": "/images/products/wires.jpg",
+        "image": "/images/products/pipes.jpg",
         "tags": [
             "electrical",
             "copper",
@@ -360,7 +360,7 @@ module.exports = [
         "dimension": "16 sqmm",
         "description": "Heavy-duty armoured cable for industrial power distribution.",
         "priceRange": "₹450 - ₹550 per meter",
-        "image": "/images/products/cables.jpg",
+        "image": "/images/products/pipes.jpg",
         "tags": [
             "industrial",
             "power",
