@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd steel-client && npm install && npm run build",
+  "outputDirectory": "steel-client/.next",
+  "installCommand": "cd steel-client && npm install",
+  "framework": "nextjs"
+}
