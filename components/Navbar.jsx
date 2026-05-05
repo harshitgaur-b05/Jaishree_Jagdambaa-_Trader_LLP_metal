@@ -25,18 +25,24 @@ export default function Navbar() {
     <header className="bg-white dark:bg-[#121212] border-b border-slate-200 dark:border-white/10 sticky top-0 z-40 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 md:px-8 h-16 flex items-center justify-between gap-4">
         {/* Logo + name */}
-        <Link href="/" className="flex items-center gap-1.5 sm:gap-2.5 flex-shrink-0">
-          {/* Steel beam icon */}
-          <div className="w-7 h-7 sm:w-8 sm:h-8 bg-[#10b981] rounded-lg flex items-center justify-center flex-shrink-0">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white dark:text-[#121212]">
+        <Link href="/" className="flex items-center gap-2 sm:gap-3 flex-shrink-0 group">
+          {/* Steel beam icon with hover effect */}
+          <div className="w-8 h-8 sm:w-10 sm:h-10 bg-[#10b981] rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-emerald-500/20 group-hover:scale-110 transition-transform duration-300">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 sm:w-5 h-5 text-white dark:text-[#121212]">
               <rect x="2" y="3" width="20" height="4" rx="1"/>
               <rect x="2" y="17" width="20" height="4" rx="1"/>
               <rect x="10" y="7" width="4" height="10" rx="1"/>
             </svg>
           </div>
-          <span className="text-slate-900 dark:text-white font-bold text-[11px] sm:text-sm md:text-base tracking-tight leading-none uppercase max-w-[120px] sm:max-w-none truncate">
-            {COMPANY}
-          </span>
+          
+          <div className="flex flex-col">
+            <span className="text-slate-900 dark:text-white font-black text-xs sm:text-sm md:text-lg tracking-tight leading-none uppercase">
+              Jaishree <span className="text-[#10b981]">Jagdambaa</span>
+            </span>
+            <span className="text-slate-500 dark:text-slate-400 font-bold text-[8px] sm:text-[10px] tracking-[0.15em] uppercase mt-0.5 sm:mt-1">
+              Trader LLP
+            </span>
+          </div>
         </Link>
 
         {/* Desktop nav */}

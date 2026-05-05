@@ -54,10 +54,16 @@ export default function HomePage() {
           <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
 
             {/* Eyebrow tag */}
-            <span className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full border border-white/25 bg-white/10 backdrop-blur-sm text-xs font-semibold text-white/80 uppercase tracking-[0.18em]">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#007f5f] dark:bg-[#10b981] animate-pulse inline-block"></span>
-              Jaishree Jagdambaa Trader LLP
-            </span>
+            <div className="flex flex-col items-center mb-8 group">
+              <span className="inline-flex items-center gap-2 mb-2 px-4 py-1 rounded-full border border-[#10b981]/30 bg-[#10b981]/5 backdrop-blur-sm text-[10px] font-black text-[#10b981] uppercase tracking-[0.25em]">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#10b981] animate-pulse"></span>
+                Official Supplier
+              </span>
+              <h2 className="text-white font-black text-xl md:text-2xl tracking-tighter uppercase leading-none drop-shadow-lg">
+                Jaishree <span className="text-[#10b981]">Jagdambaa</span>
+                <span className="block text-[10px] md:text-xs text-white/60 font-bold tracking-[0.3em] mt-1">Trader LLP</span>
+              </h2>
+            </div>
             <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold leading-[1.1] mb-5 tracking-tight uppercase">
               {/* Main Title */}
               <span className="animate-metal-shimmer inline-block">Your Global & Domestic Partner in</span><br />

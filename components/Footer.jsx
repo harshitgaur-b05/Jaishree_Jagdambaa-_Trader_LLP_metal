@@ -12,15 +12,22 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <div className="flex items-center gap-2 mb-3">
-              <div className="w-8 h-8 bg-[#10b981] rounded-lg flex items-center justify-center flex-shrink-0">
+            <div className="flex items-center gap-2.5 mb-4 group">
+              <div className="w-9 h-9 bg-[#10b981] rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-emerald-500/20 group-hover:scale-110 transition-transform duration-300">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-white dark:text-[#121212]">
                   <rect x="2" y="3" width="20" height="4" rx="1"/>
                   <rect x="2" y="17" width="20" height="4" rx="1"/>
                   <rect x="10" y="7" width="4" height="10" rx="1"/>
                 </svg>
               </div>
-              <span className="text-slate-900 dark:text-white font-bold text-base uppercase tracking-tight">{COMPANY}</span>
+              <div className="flex flex-col">
+                <span className="text-slate-900 dark:text-white font-black text-sm uppercase tracking-tight leading-none">
+                  Jaishree <span className="text-[#10b981]">Jagdambaa</span>
+                </span>
+                <span className="text-slate-500 dark:text-slate-400 font-bold text-[9px] tracking-[0.1em] uppercase mt-0.5">
+                  Trader LLP
+                </span>
+              </div>
             </div>
             <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
               Your trusted partner for quality steel products. Serving industries across India with premium TMT bars, MS pipes, sheets, and structural steel.
