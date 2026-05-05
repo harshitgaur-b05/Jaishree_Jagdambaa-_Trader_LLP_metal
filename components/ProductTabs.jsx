@@ -8,11 +8,14 @@ import FilterBar from './FilterBar';
 export default function ProductTabs({ initialProducts, filteredProducts, totalCount }) {
   const [activeTab, setActiveTab] = useState('steel');
 
-  // We use filteredProducts for the display, but we need to split them by category
-  // unless we want the filter bar to only affect the active tab's domain.
-  // Given the user's feedback, the FilterBar should definitely be in the Steel tab.
-  const steelProducts = (filteredProducts || initialProducts).filter(p => p.category !== 'Wires & Cables');
+  const [visibleSteel, setVisibleSteel] = useState(24);
+  const [visibleWires, setVisibleWires] = useState(24);
+
+  const steelProducts = (filteredProducts || initialProducts).filter(p => p.category !== 'Wires & Cables' && p.category !== 'Sheets/Plates');
   const wireProducts = (filteredProducts || initialProducts).filter(p => p.category === 'Wires & Cables');
+
+  const displayedSteel = steelProducts.slice(0, visibleSteel);
+  const displayedWires = wireProducts.slice(0, visibleWires);
 
   const tabs = [
     { id: 'steel', label: 'Steel Products', icon: '🏗️' },
@@ -48,14 +51,14 @@ export default function ProductTabs({ initialProducts, filteredProducts, totalCo
             {/* Re-inserting the Filter Bar for Steel Products */}
             <div className="mb-8">
               <Suspense fallback={<div className="h-20 bg-slate-100 animate-pulse rounded-xl" />}>
-                <FilterBar totalCount={totalCount} filteredCount={filteredProducts?.length || 0} />
+                <FilterBar totalCount={steelProducts.length} filteredCount={steelProducts.length} />
               </Suspense>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {steelProducts.length > 0 ? (
-                steelProducts.map((product) => (
-                  <ProductCard key={product.id} product={product} />
+              {displayedSteel.length > 0 ? (
+                displayedSteel.map((product) => (
+                  <ProductCard key={product._id || product.id} product={product} />
                 ))
               ) : (
                 <div className="col-span-full text-center py-20 bg-white dark:bg-white/5 rounded-3xl border border-dashed border-slate-300 dark:border-white/10">
@@ -65,15 +68,26 @@ export default function ProductTabs({ initialProducts, filteredProducts, totalCo
                 </div>
               )}
             </div>
+
+            {visibleSteel < steelProducts.length && (
+              <div className="mt-12 flex justify-center">
+                <button 
+                  onClick={() => setVisibleSteel(prev => prev + 24)}
+                  className="px-8 py-3 bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-full font-bold text-[#007f5f] hover:bg-[#007f5f] hover:text-white transition-all duration-300"
+                >
+                  Load More Steel Products ({steelProducts.length - visibleSteel} remaining)
+                </button>
+              </div>
+            )}
           </div>
         )}
 
         {activeTab === 'wires' && (
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {wireProducts.length > 0 ? (
-                wireProducts.map((product) => (
-                  <ProductCard key={product.id} product={product} />
+              {displayedWires.length > 0 ? (
+                displayedWires.map((product) => (
+                  <ProductCard key={product._id || product.id} product={product} />
                 ))
               ) : (
                 <div className="col-span-full text-center py-20 bg-white dark:bg-white/5 rounded-3xl border border-dashed border-slate-300 dark:border-white/10">
@@ -81,6 +95,17 @@ export default function ProductTabs({ initialProducts, filteredProducts, totalCo
                 </div>
               )}
             </div>
+
+            {visibleWires < wireProducts.length && (
+              <div className="mt-12 flex justify-center">
+                <button 
+                  onClick={() => setVisibleWires(prev => prev + 24)}
+                  className="px-8 py-3 bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-full font-bold text-[#007f5f] hover:bg-[#007f5f] hover:text-white transition-all duration-300"
+                >
+                  Load More Wires ({wireProducts.length - visibleWires} remaining)
+                </button>
+              </div>
+            )}
           </div>
         )}
 

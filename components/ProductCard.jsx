@@ -20,8 +20,14 @@ function ProductInitials({ name }) {
 export default function ProductCard({ product }) {
   const [imgError, setImgError] = useState(false);
   const { addToCart, isInCart } = useEnquiryCart();
-  const waLink = getSingleProductWALink(product);
-  const inCart = isInCart(product.id);
+  // Support both MongoDB _id and legacy id fields
+  const productId = product._id || product.id;
+  // Slug: use existing slug field or fall back to _id
+  const productSlug = product.slug || productId;
+  // Normalise so cart functions always have a consistent `id`
+  const normalised = { ...product, id: productId };
+  const waLink = getSingleProductWALink(normalised);
+  const inCart = isInCart(productId);
 
   return (
     <motion.div 
@@ -38,6 +44,7 @@ export default function ProductCard({ product }) {
           <motion.img
             src={product.image}
             alt={product.name}
+            loading="lazy"
             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100"
             onError={() => setImgError(true)}
           />
@@ -48,21 +55,41 @@ export default function ProductCard({ product }) {
         <span className="absolute top-3 left-3 bg-[#10b981] text-white dark:text-[#121212] text-xs font-bold px-3 py-1.5 rounded-full shadow-sm uppercase tracking-wider">
           {product.category}
         </span>
+        {/* Sub-Category badge */}
+        {product.subCategory && (
+          <span className="absolute top-3 right-3 bg-slate-900/70 dark:bg-white/10 backdrop-blur-sm text-white text-[10px] font-semibold px-2.5 py-1 rounded-full uppercase tracking-wider">
+            {product.subCategory}
+          </span>
+        )}
       </div>
 
       {/* Content */}
       <div className="flex flex-col flex-1 p-5 gap-4">
         <div>
           <h3 className="font-bold text-slate-900 dark:text-slate-200 text-lg leading-tight group-hover:text-[#10b981] transition-colors">{product.name}</h3>
-          <p className="text-sm text-slate-500 mt-1">
-            {product.dimension} · {product.type}
-          </p>
+          <div className="flex flex-wrap items-center gap-1.5 mt-2">
+            {product.subCategory && (
+              <span className="text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-md bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800/30">
+                {product.subCategory}
+              </span>
+            )}
+            {product.type && (
+              <span className="text-[10px] font-semibold uppercase tracking-wide px-2 py-0.5 rounded-md bg-slate-100 dark:bg-white/5 text-slate-500 dark:text-slate-400">
+                {product.type}
+              </span>
+            )}
+            {product.dimension && (
+              <span className="text-[10px] text-slate-400 dark:text-slate-500">
+                {product.dimension}
+              </span>
+            )}
+          </div>
         </div>
 
         {/* Buttons */}
         <div className="flex flex-col gap-2 mt-auto pt-2">
           <motion.button
-            onClick={() => addToCart(product)}
+            onClick={() => addToCart(normalised)}
             whileTap={{ scale: 0.95 }}
             className={`w-full text-sm font-bold py-2.5 rounded-xl border transition-all duration-300 overflow-hidden relative ${
               inCart
@@ -114,7 +141,7 @@ export default function ProductCard({ product }) {
 
         {/* View detail link */}
         <Link
-          href={`/products/${product.slug}`}
+          href={`/products/${productSlug}`}
           className="text-xs text-slate-500 hover:text-[#10b981] dark:hover:text-[#10b981] uppercase tracking-wider font-semibold text-center mt-1 transition-colors"
         >
           View Details →
