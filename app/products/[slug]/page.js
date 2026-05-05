@@ -6,7 +6,14 @@ import ProductCard from '@/components/ProductCard';
 import AddToCartButton from './AddToCartButton';
 
 export async function generateStaticParams() {
-  return getAllSlugs();
+  const slugs = getAllSlugs();
+  console.log('Static Params Count:', slugs.length);
+  if (slugs.length > 0) {
+    console.log('Sample Slug:', slugs[0]);
+  }
+  return slugs.map(s => ({
+    slug: String(s.slug)
+  }));
 }
 
 export async function generateMetadata({ params }) {
