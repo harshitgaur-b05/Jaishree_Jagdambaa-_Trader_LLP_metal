@@ -55,11 +55,11 @@ Sent from: Industrial Solutions Portal`;
 
     const waUrl = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
     
+    // Open WhatsApp synchronously to prevent browser popup blockers
+    window.open(waUrl, '_blank');
+    
     // Simulate a brief delay for UX
     await new Promise(resolve => setTimeout(resolve, 800));
-    
-    // Open WhatsApp
-    window.open(waUrl, '_blank');
     
     setIsSubmitting(false);
     setSubmitted(true);
