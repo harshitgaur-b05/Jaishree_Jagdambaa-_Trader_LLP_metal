@@ -11,8 +11,8 @@ export default function ProductTabs({ initialProducts, filteredProducts, totalCo
   const [visibleSteel, setVisibleSteel] = useState(24);
   const [visibleWires, setVisibleWires] = useState(24);
 
-  const steelProducts = (filteredProducts || initialProducts).filter(p => p.category !== 'Wires & Cables' && p.category !== 'Sheets/Plates');
-  const wireProducts = (filteredProducts || initialProducts).filter(p => p.category === 'Wires & Cables');
+  const steelProducts = (filteredProducts || initialProducts).filter(p => p.category !== 'Wires and Cables' && p.category !== 'Sheets/Plates');
+  const wireProducts = (filteredProducts || initialProducts).filter(p => p.category === 'Wires and Cables');
 
   const displayedSteel = steelProducts.slice(0, visibleSteel);
   const displayedWires = wireProducts.slice(0, visibleWires);
