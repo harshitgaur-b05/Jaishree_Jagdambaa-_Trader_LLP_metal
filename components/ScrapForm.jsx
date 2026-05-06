@@ -122,9 +122,9 @@ Sent from: Industrial Solutions Portal`;
               onChange={handleChange}
               className="px-4 py-2.5 bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl focus:ring-2 focus:ring-[#007f5f] outline-none transition-all dark:text-white"
             >
-              <option value="" disabled>Select Category</option>
+              <option value="" disabled className="dark:bg-[#1e1e1e] dark:text-white text-slate-900">Select Category</option>
               {CATEGORIES.map(cat => (
-                <option key={cat} value={cat}>{cat}</option>
+                <option key={cat} value={cat} className="dark:bg-[#1e1e1e] dark:text-white text-slate-900">{cat}</option>
               ))}
             </select>
           </div>
