@@ -27,19 +27,21 @@ export function EnquiryCartProvider({ children }) {
   }, [cart, mounted]);
 
   const addToCart = useCallback((product) => {
+    const pid = product.id || product._id;
     setCart((prev) => {
-      if (prev.find((p) => p.id === product.id)) return prev;
-      return [...prev, product];
+      if (prev.find((p) => (p.id || p._id) === pid)) return prev;
+      // Ensure the stored item always has a consistent `id` field
+      return [...prev, { ...product, id: pid }];
     });
     // Removed auto-opening for better user flow
   }, []);
 
   const removeFromCart = useCallback((id) => {
-    setCart((prev) => prev.filter((p) => p.id !== id));
+    setCart((prev) => prev.filter((p) => (p.id || p._id) !== id));
   }, []);
 
   const isInCart = useCallback(
-    (id) => cart.some((p) => p.id === id),
+    (id) => cart.some((p) => (p.id || p._id) === id),
     [cart]
   );
 
