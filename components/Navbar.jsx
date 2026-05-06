@@ -36,10 +36,10 @@ export default function Navbar() {
           </div>
           
           <div className="flex flex-col">
-            <span className="text-slate-900 dark:text-white font-black text-xs sm:text-sm md:text-lg tracking-tight leading-none uppercase">
+            <span className="text-foreground font-black text-xs sm:text-sm md:text-lg tracking-tight leading-none uppercase">
               Jaishree <span className="text-[#10b981]">Jagdambaa</span>
             </span>
-            <span className="text-slate-500 dark:text-slate-400 font-bold text-[8px] sm:text-[10px] tracking-[0.15em] uppercase mt-0.5 sm:mt-1">
+            <span className="text-muted-foreground font-bold text-[8px] sm:text-[10px] tracking-[0.15em] uppercase mt-0.5 sm:mt-1">
               Trader LLP
             </span>
           </div>

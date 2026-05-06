@@ -11,7 +11,7 @@ function ProductInitials({ name }) {
   const words = name.trim().split(/\s+/);
   const initials = words.slice(0, 2).map((w) => w[0].toUpperCase()).join('');
   return (
-    <div className="w-full h-full flex items-center justify-center bg-slate-50 dark:bg-[#121212] transition-colors duration-300">
+    <div className="w-full h-full flex items-center justify-center bg-muted transition-colors duration-300">
       <span className="text-4xl font-bold text-[#10b981] tracking-widest opacity-50">{initials}</span>
     </div>
   );
@@ -36,10 +36,10 @@ export default function ProductCard({ product }) {
       viewport={{ once: true }}
       whileHover={{ y: -8 }}
       transition={{ duration: 0.4 }}
-      className="bg-white dark:bg-[#18181b] rounded-2xl shadow-md dark:shadow-lg border border-slate-200 dark:border-white/5 overflow-hidden hover:border-[#10b981]/50 transition-colors flex flex-col group"
+      className="bg-card text-card-foreground rounded-2xl shadow-md dark:shadow-lg border border-border dark:border-white/5 overflow-hidden hover:border-[#10b981]/50 transition-colors flex flex-col group"
     >
       {/* Image */}
-      <div className="relative h-48 bg-slate-50 dark:bg-[#121212] overflow-hidden border-b border-slate-100 dark:border-white/5 transition-colors duration-300">
+      <div className="relative h-48 bg-muted overflow-hidden border-b border-border dark:border-white/5 transition-colors duration-300">
         {!imgError ? (
           <motion.img
             src={product.image}
@@ -66,7 +66,7 @@ export default function ProductCard({ product }) {
       {/* Content */}
       <div className="flex flex-col flex-1 p-5 gap-4">
         <div>
-          <h3 className="font-bold text-slate-900 dark:text-slate-200 text-lg leading-tight group-hover:text-[#10b981] transition-colors">{product.name}</h3>
+          <h3 className="font-bold text-foreground text-lg leading-tight group-hover:text-[#10b981] transition-colors">{product.name}</h3>
           <div className="flex flex-wrap items-center gap-1.5 mt-2">
             {product.subCategory && (
               <span className="text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-md bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800/30">
@@ -74,12 +74,12 @@ export default function ProductCard({ product }) {
               </span>
             )}
             {product.type && (
-              <span className="text-[10px] font-semibold uppercase tracking-wide px-2 py-0.5 rounded-md bg-slate-100 dark:bg-white/5 text-slate-500 dark:text-slate-400">
+              <span className="text-[10px] font-semibold uppercase tracking-wide px-2 py-0.5 rounded-md bg-muted text-muted-foreground">
                 {product.type}
               </span>
             )}
             {product.dimension && (
-              <span className="text-[10px] text-slate-400 dark:text-slate-500">
+              <span className="text-[10px] text-muted-foreground">
                 {product.dimension}
               </span>
             )}
@@ -94,7 +94,7 @@ export default function ProductCard({ product }) {
             className={`w-full text-sm font-bold py-2.5 rounded-xl border transition-all duration-300 overflow-hidden relative ${
               inCart
                 ? 'bg-[#10b981]/10 border-[#10b981] text-[#10b981] cursor-default'
-                : 'bg-slate-50 dark:bg-white/5 hover:bg-[#10b981] hover:text-white dark:hover:text-[#121212] text-slate-700 dark:text-slate-300 border-slate-200 dark:border-white/10 hover:border-transparent'
+                : 'bg-muted hover:bg-[#10b981] hover:text-white dark:hover:text-[#121212] text-foreground border-border dark:border-white/10 hover:border-transparent'
             }`}
             disabled={inCart}
           >

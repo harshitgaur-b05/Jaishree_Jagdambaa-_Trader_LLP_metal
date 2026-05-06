@@ -27,7 +27,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={inter.variable} suppressHydrationWarning>
-      <body className="bg-slate-50 dark:bg-[#121212] text-slate-900 dark:text-slate-200 flex flex-col min-h-screen antialiased transition-colors duration-300">
+      <body className="antialiased selection:bg-[#10b981]/30 transition-colors duration-300">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <EnquiryCartProvider>
             <Navbar />
