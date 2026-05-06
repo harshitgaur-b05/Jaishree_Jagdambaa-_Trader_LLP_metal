@@ -66,10 +66,10 @@ export default function HomePage() {
             </div>
             <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold leading-[1.1] mb-5 tracking-tight uppercase">
               {/* Main Title */}
-              <span className="animate-metal-shimmer inline-block">Your Global & Domestic Partner in</span><br />
+              <span className="text-white inline-block">Your Global & Domestic Partner in</span><br />
               <span className="animate-brand-shimmer drop-shadow-md inline-block">Metal Supply,</span>{' '}
-              <span className="animate-metal-shimmer inline-block">Trade</span><br />
-              <span className="animate-metal-shimmer inline-block">
+              <span className="text-white inline-block">Trade</span><br />
+              <span className="text-white inline-block">
                 &amp; Distribution
               </span>
             </h1>
@@ -147,9 +147,9 @@ export default function HomePage() {
                 {/* Certificate Thumbnail Image */}
                 <div className="bg-slate-50 dark:bg-[#121212] border border-slate-100 dark:border-white/5 rounded-lg mb-4 flex-grow relative min-h-[160px] max-h-[200px] overflow-visible group">
                   <div className="w-full h-full overflow-hidden rounded-lg relative">
-                    <img 
-                      src={`/certificates/${imgNum}.png`} 
-                      alt={title} 
+                    <img
+                      src={`/certificates/${imgNum}.png`}
+                      alt={title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
