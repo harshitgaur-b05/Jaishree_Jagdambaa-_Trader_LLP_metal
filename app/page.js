@@ -60,7 +60,7 @@ export default function HomePage() {
                 Official Supplier
               </span>
               <h2 className="text-white font-black text-xl md:text-2xl tracking-tighter uppercase leading-none drop-shadow-lg">
-                Jaishree <span className="text-[#10b981]">Jagdambaa</span>
+                <span className="text-[#10b981]">Jaishree Jagdambaa</span>
                 <span className="block text-[10px] md:text-xs text-white/60 font-bold tracking-[0.3em] mt-1">Trader LLP</span>
               </h2>
             </div>

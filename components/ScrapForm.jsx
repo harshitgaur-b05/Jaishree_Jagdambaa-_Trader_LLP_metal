@@ -5,7 +5,6 @@ import React, { useState } from 'react';
 const CATEGORIES = [
   'MS Steel',
   'Structured Steel',
-  'TMT',
   'Copper',
   'Aluminium',
   'Other'
@@ -36,7 +35,7 @@ export default function ScrapForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Construct WhatsApp message
     const message = `*NEW SCRAP SALE ENQUIRY*
 ----------------------------
@@ -54,13 +53,13 @@ export default function ScrapForm() {
 Sent from: Industrial Solutions Portal`;
 
     const waUrl = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
-    
+
     // Open WhatsApp synchronously to prevent browser popup blockers
     window.open(waUrl, '_blank');
-    
+
     // Simulate a brief delay for UX
     await new Promise(resolve => setTimeout(resolve, 800));
-    
+
     setIsSubmitting(false);
     setSubmitted(true);
   };
@@ -73,7 +72,7 @@ Sent from: Industrial Solutions Portal`;
         <p className="text-slate-600 dark:text-slate-400 mb-6">
           Thank you for reaching out. Our team will contact you shortly to discuss your scrap sale.
         </p>
-        <button 
+        <button
           onClick={() => setSubmitted(false)}
           className="px-6 py-2 bg-[#007f5f] hover:bg-[#005f47] text-white rounded-full transition-colors"
         >
