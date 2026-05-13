@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 import { getCategories, getSubCategories, getTypes, getDimensions } from '@/lib/products';
+import { useTranslation } from '@/lib/i18n';
 
 /* ─── shared select style ─── */
 const SELECT_CLS =
@@ -28,7 +29,7 @@ function SelectWrapper({ label, value, onChange, disabled, children }) {
         >
           {children}
         </select>
-        <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-emerald-500 text-xs">
+        <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-emerald-500 text-xs rtl:right-auto rtl:left-3">
           ▾
         </span>
       </div>
@@ -37,6 +38,7 @@ function SelectWrapper({ label, value, onChange, disabled, children }) {
 }
 
 export default function FilterBar({ totalCount, filteredCount }) {
+  const { t } = useTranslation();
   const router       = useRouter();
   const pathname     = usePathname();
   const searchParams = useSearchParams();
@@ -102,11 +104,11 @@ export default function FilterBar({ totalCount, filteredCount }) {
         <div className="flex items-center gap-2">
           <span className="text-lg">🔍</span>
           <h3 className="text-sm font-bold text-slate-800 dark:text-white uppercase tracking-wider">
-            Filter Products
+            {t('filter.title')}
           </h3>
           {isFiltered && (
-            <span className="ml-1 px-2 py-0.5 text-[10px] font-bold rounded-full bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-400 uppercase tracking-wide">
-              Active
+            <span className="ml-1 rtl:ml-0 rtl:mr-1 px-2 py-0.5 text-[10px] font-bold rounded-full bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-400 uppercase tracking-wide">
+              {t('filter.active')}
             </span>
           )}
         </div>
@@ -114,7 +116,7 @@ export default function FilterBar({ totalCount, filteredCount }) {
         <div className="flex items-center gap-3">
           <span className="text-xs text-slate-500 dark:text-slate-400">
             <span className="font-semibold text-slate-900 dark:text-white">{filteredCount}</span>
-            {' '}/ {totalCount} products
+            {' '}/ {totalCount} {t('filter.products')}
           </span>
           {isFiltered && (
             <button
@@ -125,7 +127,7 @@ export default function FilterBar({ totalCount, filteredCount }) {
                          hover:bg-red-100 dark:hover:bg-red-900/40
                          transition-all duration-200"
             >
-              <span>✕</span> Clear All
+              <span>✕</span> {t('filter.clear_all')}
             </button>
           )}
         </div>
@@ -162,12 +164,12 @@ export default function FilterBar({ totalCount, filteredCount }) {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
         {/* Level 1 — Category */}
         <SelectWrapper
-          label="Category"
+          label={t('filter.category')}
           value={category}
           onChange={handleCategory}
           disabled={false}
         >
-          <option value="">All Categories</option>
+          <option value="">{t('filter.all_categories')}</option>
           {categories.map((c) => (
             <option key={c} value={c}>{c}</option>
           ))}
@@ -175,12 +177,12 @@ export default function FilterBar({ totalCount, filteredCount }) {
 
         {/* Level 2 — Sub-Category */}
         <SelectWrapper
-          label="Sub-Category"
+          label={t('filter.subcategory')}
           value={sub}
           onChange={handleSub}
           disabled={!category}
         >
-          <option value="">All Sub-Categories</option>
+          <option value="">{t('filter.all_subcategories')}</option>
           {subCategories.map((s) => (
             <option key={s} value={s}>{s}</option>
           ))}
@@ -188,12 +190,12 @@ export default function FilterBar({ totalCount, filteredCount }) {
 
         {/* Level 3 — Type */}
         <SelectWrapper
-          label="Type"
+          label={t('filter.type')}
           value={type}
           onChange={handleType}
           disabled={!sub}
         >
-          <option value="">All Types</option>
+          <option value="">{t('filter.all_types')}</option>
           {types.map((t) => (
             <option key={t} value={t}>{t}</option>
           ))}
@@ -201,12 +203,12 @@ export default function FilterBar({ totalCount, filteredCount }) {
 
         {/* Level 4 — Dimension */}
         <SelectWrapper
-          label="Dimension / Size"
+          label={t('filter.dimension')}
           value={dimension}
           onChange={(val) => setDimension(val)}
           disabled={!type}
         >
-          <option value="">All Dimensions</option>
+          <option value="">{t('filter.all_dimensions')}</option>
           {dimensions.map((d) => (
             <option key={d} value={d}>{d}</option>
           ))}
@@ -216,7 +218,7 @@ export default function FilterBar({ totalCount, filteredCount }) {
       {/* Quick-pick category chips */}
       <div className="mt-4 pt-4 border-t border-slate-100 dark:border-white/5">
         <p className="text-[10px] font-semibold uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-2">
-          Quick Pick
+          {t('filter.quick_pick')}
         </p>
         <div className="flex flex-wrap gap-2">
           {categories.map((c) => (

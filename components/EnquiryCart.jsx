@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useState, useEffect, useCallback } from 'react';
 import { getCartWALink, getCartWithDetailsWALink } from '@/lib/whatsapp';
+import { useTranslation } from '@/lib/i18n';
 
 const EnquiryCartContext = createContext(null);
 
@@ -33,7 +34,6 @@ export function EnquiryCartProvider({ children }) {
       // Ensure the stored item always has a consistent `id` field
       return [...prev, { ...product, id: pid }];
     });
-    // Removed auto-opening for better user flow
   }, []);
 
   const removeFromCart = useCallback((id) => {
@@ -74,6 +74,7 @@ export default function EnquiryCart() {
   const { cart, removeFromCart, clearCart, mounted, isCartOpen, closeCart } = useEnquiryCart();
   const [step, setStep] = useState('cart'); // 'cart' or 'checkout'
   const [formData, setFormData] = useState({ name: '', phone: '', email: '' });
+  const { t } = useTranslation();
 
   // Reset to cart step when cart opens/closes
   useEffect(() => {
@@ -107,8 +108,8 @@ export default function EnquiryCart() {
 
         {/* Drawer Panel */}
         <div
-          className={`absolute top-0 right-0 h-full w-full sm:max-w-md bg-white dark:bg-[#121212] shadow-2xl transition-transform duration-300 ease-out flex flex-col ${
-            isCartOpen ? 'translate-x-0' : 'translate-x-full'
+          className={`absolute top-0 right-0 rtl:right-auto rtl:left-0 h-full w-full sm:max-w-md bg-white dark:bg-[#121212] shadow-2xl transition-transform duration-300 ease-out flex flex-col ${
+            isCartOpen ? 'translate-x-0' : 'translate-x-full rtl:-translate-x-full'
           }`}
         >
           {/* Header */}
@@ -118,14 +119,14 @@ export default function EnquiryCart() {
                 {step === 'checkout' && (
                   <button 
                     onClick={() => setStep('cart')}
-                    className="p-1 -ml-2 text-slate-500 hover:text-slate-900 dark:hover:text-white"
+                    className="p-1 -ml-2 rtl:-mr-2 rtl:ml-0 text-slate-500 hover:text-slate-900 dark:hover:text-white"
                     title="Back to Cart"
                   >
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"/></svg>
+                    <svg className="w-5 h-5 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"/></svg>
                   </button>
                 )}
                 <h2 className="font-bold text-slate-900 dark:text-white text-xl flex items-center gap-2">
-                  {step === 'cart' ? 'Enquiry Cart' : 'Your Details'}
+                  {step === 'cart' ? t('cart.title') : t('cart.your_details')}
                   {step === 'cart' && (
                     <span className="bg-[#10b981]/10 text-[#10b981] text-xs px-2 py-0.5 rounded-full font-bold">
                       {cart.length}
@@ -134,7 +135,7 @@ export default function EnquiryCart() {
                 </h2>
               </div>
               <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-                {step === 'cart' ? 'Selected industrial materials' : 'We need these details to send you a quote'}
+                {step === 'cart' ? t('cart.selected_materials') : t('cart.details_subtitle')}
               </p>
             </div>
             <button
@@ -154,18 +155,18 @@ export default function EnquiryCart() {
               cart.length === 0 ? (
                 <div className="h-full flex flex-col items-center justify-center text-center opacity-40">
                   <div className="text-6xl mb-4">🛒</div>
-                  <h3 className="text-lg font-bold">Your cart is empty</h3>
-                  <p className="text-sm max-w-[200px] mt-1">Browse our products and add them to your enquiry.</p>
+                  <h3 className="text-lg font-bold">{t('cart.empty')}</h3>
+                  <p className="text-sm max-w-[200px] mt-1">{t('cart.empty_desc')}</p>
                 </div>
               ) : (
                 <div className="space-y-4">
                   <div className="flex justify-between items-center pb-2">
-                    <span className="text-sm font-semibold text-slate-500">Selected Items</span>
+                    <span className="text-sm font-semibold text-slate-500">{t('cart.selected_items')}</span>
                     <button
                       onClick={clearCart}
                       className="text-xs font-bold text-red-500 hover:text-red-600 transition-colors"
                     >
-                      Clear All
+                      {t('cart.clear_all')}
                     </button>
                   </div>
                   <div className="divide-y divide-slate-100 dark:divide-white/5 border-y border-slate-100 dark:border-white/5">
@@ -200,52 +201,52 @@ export default function EnquiryCart() {
               )
             ) : (
               // --- CHECKOUT FORM VIEW ---
-              <form id="enquiry-form" onSubmit={handleCheckoutSubmit} className="space-y-5 animate-in slide-in-from-right-8 duration-300">
+              <form id="enquiry-form" onSubmit={handleCheckoutSubmit} className="space-y-5 animate-in slide-in-from-right-8 rtl:slide-in-from-left-8 duration-300">
                 <div className="flex flex-col gap-1.5">
                   <label className="text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider">
-                    Name / Company <span className="text-red-500">*</span>
+                    {t('cart.name_label')} <span className="text-red-500">*</span>
                   </label>
                   <input
                     required
                     type="text"
                     value={formData.name}
                     onChange={(e) => setFormData({...formData, name: e.target.value})}
-                    placeholder="Enter full name or company"
+                    placeholder={t('cart.name_placeholder')}
                     className="px-4 py-3 bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl focus:ring-2 focus:ring-[#10b981] outline-none transition-all text-sm"
                   />
                 </div>
                 
                 <div className="flex flex-col gap-1.5">
                   <label className="text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider">
-                    Phone Number <span className="text-red-500">*</span>
+                    {t('cart.phone_label')} <span className="text-red-500">*</span>
                   </label>
                   <input
                     required
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                    placeholder="Enter mobile number"
+                    placeholder={t('cart.phone_placeholder')}
                     className="px-4 py-3 bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl focus:ring-2 focus:ring-[#10b981] outline-none transition-all text-sm"
                   />
                 </div>
 
                 <div className="flex flex-col gap-1.5">
                   <label className="text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider">
-                    Email Address <span className="text-slate-400 font-normal lowercase">(Optional)</span>
+                    {t('cart.email_label')} <span className="text-slate-400 font-normal lowercase">{t('cart.optional')}</span>
                   </label>
                   <input
                     type="email"
                     value={formData.email}
                     onChange={(e) => setFormData({...formData, email: e.target.value})}
-                    placeholder="For formal quotations"
+                    placeholder={t('cart.email_placeholder')}
                     className="px-4 py-3 bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl focus:ring-2 focus:ring-[#10b981] outline-none transition-all text-sm"
                   />
                 </div>
                 
                 <div className="bg-slate-50 dark:bg-white/5 p-4 rounded-xl border border-slate-100 dark:border-white/5 mt-4">
                   <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">
-                    You are requesting a quote for <strong className="text-slate-900 dark:text-white">{cart.length} item{cart.length > 1 ? 's' : ''}</strong>. 
-                    This will redirect you to WhatsApp to send the formal request directly to our sales team.
+                    {t('cart.quote_note')} <strong className="text-slate-900 dark:text-white">{cart.length} {cart.length > 1 ? t('cart.items') : t('cart.item')}</strong>. 
+                    {t('cart.redirect_note')}
                   </p>
                 </div>
               </form>
@@ -260,7 +261,7 @@ export default function EnquiryCart() {
                   onClick={() => setStep('checkout')}
                   className="w-full flex items-center justify-center gap-2 bg-[#10b981] hover:bg-[#059669] text-white font-bold py-4 rounded-xl transition-all duration-300 shadow-lg shadow-emerald-500/20 active:scale-[0.98]"
                 >
-                  Proceed to Enquiry →
+                  {t('cart.proceed')}
                 </button>
               ) : (
                 <button
@@ -271,7 +272,7 @@ export default function EnquiryCart() {
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" className="w-5 h-5">
                     <path d="M16.003 2.667C8.639 2.667 2.667 8.637 2.667 16c0 2.348.627 4.647 1.814 6.657L2.667 29.333l6.87-1.793A13.29 13.29 0 0 0 16.003 29.333c7.363 0 13.33-5.97 13.33-13.333 0-7.364-5.967-13.333-13.33-13.333zm0 24c-2.028 0-4.02-.549-5.755-1.587l-.413-.247-4.077 1.063 1.09-3.968-.269-.432A10.634 10.634 0 0 1 5.333 16c0-5.882 4.787-10.667 10.67-10.667S26.667 10.118 26.667 16c0 5.883-4.784 10.667-10.664 10.667zm5.858-7.986c-.32-.16-1.894-.933-2.188-1.04-.294-.106-.508-.16-.722.16s-.829 1.04-1.015 1.254c-.187.213-.374.24-.694.08-.32-.16-1.351-.498-2.573-1.587-.95-.847-1.59-1.893-1.777-2.213-.187-.32-.02-.493.14-.653.143-.144.32-.374.48-.56.16-.187.213-.32.32-.534.107-.213.053-.4-.027-.56-.08-.16-.72-1.733-.987-2.373-.26-.62-.524-.536-.72-.546l-.614-.01c-.213 0-.56.08-.853.4-.294.32-1.12 1.093-1.12 2.667s1.147 3.093 1.307 3.307c.16.213 2.254 3.44 5.46 4.827.764.33 1.36.527 1.824.674.766.242 1.465.208 2.017.127.615-.092 1.894-.773 2.16-1.52.267-.747.267-1.387.187-1.52-.08-.133-.294-.213-.614-.373z"/>
                   </svg>
-                  Send Details to WhatsApp
+                  {t('cart.send_whatsapp')}
                 </button>
               )}
             </div>

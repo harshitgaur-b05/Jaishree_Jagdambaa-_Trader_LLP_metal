@@ -6,6 +6,7 @@ import { getSingleProductWALink } from '@/lib/whatsapp';
 import { useEnquiryCart } from '@/components/EnquiryCart';
 
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from '@/lib/i18n';
 
 function ProductInitials({ name }) {
   const words = name.trim().split(/\s+/);
@@ -20,6 +21,7 @@ function ProductInitials({ name }) {
 export default function ProductCard({ product }) {
   const [imgError, setImgError] = useState(false);
   const { addToCart, isInCart } = useEnquiryCart();
+  const { t } = useTranslation();
   // Support both MongoDB _id and legacy id fields
   const productId = product._id || product.id;
   // Slug: use existing slug field or fall back to _id
@@ -52,12 +54,12 @@ export default function ProductCard({ product }) {
           <ProductInitials name={product.name} />
         )}
         {/* Category badge */}
-        <span className="absolute top-3 left-3 bg-[#10b981] text-white dark:text-[#121212] text-xs font-bold px-3 py-1.5 rounded-full shadow-sm uppercase tracking-wider">
+        <span className="absolute top-3 left-3 bg-[#10b981] text-white dark:text-[#121212] text-xs font-bold px-3 py-1.5 rounded-full shadow-sm uppercase tracking-wider rtl:left-auto rtl:right-3">
           {product.category}
         </span>
         {/* Sub-Category badge */}
         {product.subCategory && (
-          <span className="absolute top-3 right-3 bg-slate-900/70 dark:bg-white/10 backdrop-blur-sm text-white text-[10px] font-semibold px-2.5 py-1 rounded-full uppercase tracking-wider">
+          <span className="absolute top-3 right-3 bg-slate-900/70 dark:bg-white/10 backdrop-blur-sm text-white text-[10px] font-semibold px-2.5 py-1 rounded-full uppercase tracking-wider rtl:right-auto rtl:left-3">
             {product.subCategory}
           </span>
         )}
@@ -113,7 +115,7 @@ export default function ProductCard({ product }) {
                   >
                     ✓
                   </motion.span>
-                  Added to Enquiry
+                  {t('product_card.added_to_enquiry')}
                 </motion.div>
               ) : (
                 <motion.div
@@ -122,7 +124,7 @@ export default function ProductCard({ product }) {
                   animate={{ y: 0, opacity: 1 }}
                   exit={{ y: 20, opacity: 0 }}
                 >
-                  Add to Enquiry
+                  {t('product_card.add_to_enquiry')}
                 </motion.div>
               )}
             </AnimatePresence>
@@ -135,16 +137,16 @@ export default function ProductCard({ product }) {
             whileTap={{ scale: 0.95 }}
             className="w-full text-sm font-bold py-2.5 rounded-xl bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-white border border-[#25D366]/20 text-center transition-all duration-300 flex items-center justify-center gap-2"
           >
-            <span className="text-base">💬</span> WhatsApp
+            <span className="text-base">💬</span> {t('product_card.whatsapp')}
           </motion.a>
         </div>
 
         {/* View detail link */}
         <Link
           href={`/products/${productSlug}`}
-          className="text-xs text-slate-500 hover:text-[#10b981] dark:hover:text-[#10b981] uppercase tracking-wider font-semibold text-center mt-1 transition-colors"
+          className="text-xs text-slate-500 hover:text-[#10b981] dark:hover:text-[#10b981] uppercase tracking-wider font-semibold text-center mt-1 transition-colors flex justify-center items-center gap-1"
         >
-          View Details →
+          {t('product_card.view_details')}
         </Link>
       </div>
     </motion.div>

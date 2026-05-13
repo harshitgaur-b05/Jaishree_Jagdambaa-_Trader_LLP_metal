@@ -1,0 +1,170 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "products": "Produits",
+    "contact": "Contact",
+    "whatsapp": "WhatsApp"
+  },
+  "hero": {
+    "badge": "Fournisseur Officiel",
+    "title1": "Votre partenaire mondial et national en",
+    "title2": "Approvisionnement en Métal,",
+    "title3": "Commerce",
+    "title4": "& Distribution",
+    "subtitle": "Fournisseurs, commerçants et distributeurs nationaux de confiance en acier, tuyaux MS, barres TMT et ferraille — approvisionnement, transformation et livraison de matériaux essentiels en Inde et dans le monde.",
+    "cta_quote": "Demander un Devis",
+    "cta_explore": "Explorer l'Inventaire",
+    "trust1": "Logistique Mondiale",
+    "trust2": "Certifié ISRI",
+    "trust3": "Approvisionnement Éthique",
+    "trust4": "Livraison dans toute l'Inde"
+  },
+  "certificates": {
+    "title": "Nos Certifications et Accréditations",
+    "verified": "Vérifié",
+    "view": "Voir les Détails",
+    "download": "Télécharger PDF"
+  },
+  "categories": {
+    "title": "Notre Gamme de Produits",
+    "subtitle": "Catalogue complet de produits en acier pour la construction, la fabrication et l'industrie."
+  },
+  "featured": {
+    "title": "Produits Vedettes",
+    "subtitle": "Les choix populaires de notre catalogue",
+    "view_all": "Voir tous les produits →"
+  },
+  "whatsapp_cta": {
+    "title": "Obtenez des Devis Instantanés sur WhatsApp",
+    "subtitle": "Pas de formulaires. Écrivez-nous directement sur WhatsApp pour les prix, la disponibilité et les informations de livraison. Notre équipe répond en quelques minutes.",
+    "button": "Chatter sur WhatsApp"
+  },
+  "why_us": {
+    "title": "Pourquoi Nous Choisir ?",
+    "q1_title": "Qualité Vérifiée",
+    "q1_desc": "Produits en acier marqués ISI et certifiés BIS provenant d'usines de confiance.",
+    "q2_title": "Livraison Rapide",
+    "q2_desc": "Livraison dans toute l'Inde avec des partenaires logistiques fiables.",
+    "q3_title": "Meilleurs Prix",
+    "q3_desc": "Tarifs de marché compétitifs. Remise en gros disponible.",
+    "q4_title": "Support Dédié",
+    "q4_desc": "Plus de 10 ans d'expérience. Support WhatsApp 6 jours par semaine."
+  },
+  "footer": {
+    "description": "Votre partenaire de confiance pour des produits en acier de qualité. Servir les industries de toute l'Inde avec des barres TMT, des tuyaux MS, des tôles et de l'acier de structure.",
+    "quick_links": "Liens Rapides",
+    "products": "Produits",
+    "contact_info": "Informations de Contact",
+    "whatsapp_us": "WhatsApp",
+    "rights": "Tous droits réservés.",
+    "tagline": "Produits en Acier de Qualité | Livraison dans toute l'Inde"
+  },
+  "filter": {
+    "title": "Filtrer les Produits",
+    "active": "Actif",
+    "clear_all": "Tout Effacer",
+    "products": "produits",
+    "category": "Catégorie",
+    "subcategory": "Sous-catégorie",
+    "type": "Type",
+    "dimension": "Dimension / Taille",
+    "all_categories": "Toutes les Catégories",
+    "all_subcategories": "Toutes les Sous-catégories",
+    "all_types": "Tous les Types",
+    "all_dimensions": "Toutes les Dimensions",
+    "quick_pick": "Sélection Rapide"
+  },
+  "cart": {
+    "title": "Panier de Demande",
+    "your_details": "Vos Coordonnées",
+    "selected_materials": "Matériaux industriels sélectionnés",
+    "details_subtitle": "Nous avons besoin de ces informations pour vous envoyer un devis",
+    "empty": "Votre panier est vide",
+    "empty_desc": "Parcourez nos produits et ajoutez-les à votre demande.",
+    "selected_items": "Articles Sélectionnés",
+    "clear_all": "Tout Effacer",
+    "proceed": "Procéder à la Demande →",
+    "send_whatsapp": "Envoyer les Détails sur WhatsApp",
+    "name_label": "Nom / Entreprise",
+    "phone_label": "Numéro de Téléphone",
+    "email_label": "Adresse E-mail",
+    "optional": "(Optionnel)",
+    "name_placeholder": "Entrez le nom complet ou l'entreprise",
+    "phone_placeholder": "Entrez le numéro de mobile",
+    "email_placeholder": "Pour les devis formels",
+    "quote_note": "Vous demandez un devis pour",
+    "item": "article",
+    "items": "articles",
+    "redirect_note": "Cela vous redirigera vers WhatsApp pour envoyer la demande formelle directement à notre équipe commerciale."
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Contactez-nous pour les prix, la disponibilité ou les commandes en gros. Nous répondons généralement en quelques minutes sur WhatsApp.",
+    "get_in_touch": "Prendre Contact",
+    "send_enquiry": "Envoyer une Demande",
+    "form_subtitle": "Remplissez le formulaire ci-dessous — cliquer sur envoyer ouvrira WhatsApp avec votre message pré-rempli.",
+    "name": "Nom Complet",
+    "phone": "Téléphone / WhatsApp",
+    "message": "Message",
+    "required": "Veuillez remplir tous les champs.",
+    "send_button": "Envoyer via WhatsApp",
+    "no_data": "Cela ouvrira WhatsApp avec votre message pré-rempli. Aucune donnée n'est stockée.",
+    "name_placeholder": "Votre nom",
+    "phone_placeholder": "+91 XXXXX XXXXX",
+    "message_placeholder": "Dites-nous ce dont vous avez besoin — nom du produit, quantité, lieu de livraison...",
+    "chat_direct": "Chatter Directement sur WhatsApp",
+    "address": "Delhi, Inde — Livraison disponible dans toute l'Inde"
+  },
+  "products_page": {
+    "title": "Solutions Industrielles",
+    "subtitle": "De l'approvisionnement en acier haut de gamme à l'infrastructure électrique et à la gestion durable de la ferraille."
+  },
+  "product_card": {
+    "add_to_enquiry": "Ajouter à la demande",
+    "added_to_enquiry": "Ajouté",
+    "whatsapp": "WhatsApp",
+    "view_details": "Voir les détails →"
+  },
+  "product_tabs": {
+    "steel_products": "Produits en Acier",
+    "wires_cables": "Fils et Câbles",
+    "sell_scrap": "Vendre de la Ferraille",
+    "no_steel": "Aucun produit trouvé",
+    "adjust_filters": "Essayez d'ajuster vos filtres.",
+    "load_more_steel": "Charger plus de produits",
+    "remaining": "restants",
+    "no_wires": "Aucun câble trouvé.",
+    "load_more_wires": "Charger plus de câbles"
+  },
+  "scrap_form": {
+    "title": "Vendez votre Ferraille",
+    "subtitle": "Remplissez le formulaire et nous vous donnerons les meilleurs prix du marché.",
+    "name": "Entreprise / Nom",
+    "category": "Catégorie de Ferraille",
+    "select_category": "Sélectionner la Catégorie",
+    "quantity": "Quantité Estimée (KG)",
+    "phone": "Téléphone",
+    "email": "Email (Optionnel)",
+    "pickup_location": "Lieu de Ramassage",
+    "state": "État / Région",
+    "city": "Ville",
+    "pincode": "Code Postal",
+    "submit": "Envoyer la Demande",
+    "processing": "Traitement...",
+    "success": "Demande Envoyée !",
+    "success_desc": "Merci de nous avoir contactés. Notre équipe vous appellera bientôt.",
+    "submit_another": "Envoyer une autre demande"
+  },
+  "product_detail": {
+    "home": "Accueil",
+    "products": "Produits",
+    "description": "Description",
+    "category": "Catégorie",
+    "sub_category": "Sous-catégorie",
+    "type": "Type",
+    "dimension": "Dimension",
+    "enquire_whatsapp": "Se renseigner sur WhatsApp",
+    "related_products": "Produits Connexes",
+    "product_not_found": "Produit Introuvable"
+  }
+}
