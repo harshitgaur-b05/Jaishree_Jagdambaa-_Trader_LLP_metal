@@ -1,0 +1,170 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "products": "製品",
+    "contact": "お問い合わせ",
+    "whatsapp": "WhatsApp"
+  },
+  "hero": {
+    "badge": "公式サプライヤー",
+    "title1": "金属供給・貿易・流通における",
+    "title2": "グローバル＆国内パートナー",
+    "title3": "金属サプライ,",
+    "title4": "貿易 & 流通",
+    "subtitle": "鉄鋼、MSパイプ、TMTバー、スクラップの信頼できるサプライヤー — インド全土および世界中に素材を調達・加工・配送します。",
+    "cta_quote": "見積もりを依頼する",
+    "cta_explore": "在庫を見る",
+    "trust1": "世界中への物流",
+    "trust2": "ISRI認定",
+    "trust3": "倫理的調達",
+    "trust4": "インド全土配送"
+  },
+  "certificates": {
+    "title": "認定・資格証明",
+    "verified": "認証済み",
+    "view": "詳細を見る",
+    "download": "PDFダウンロード"
+  },
+  "categories": {
+    "title": "製品ラインナップ",
+    "subtitle": "建設・製造・産業用途のための総合鉄鋼製品カタログ。"
+  },
+  "featured": {
+    "title": "注目製品",
+    "subtitle": "カタログの人気製品",
+    "view_all": "全製品を見る →"
+  },
+  "whatsapp_cta": {
+    "title": "WhatsAppで即時見積もり",
+    "subtitle": "フォームは不要。WhatsAppで直接メッセージを送って価格・在庫・配送情報を確認してください。チームが数分以内に返信します。",
+    "button": "WhatsAppでチャット"
+  },
+  "why_us": {
+    "title": "なぜ私たちを選ぶのか？",
+    "q1_title": "品質保証",
+    "q1_desc": "信頼できるミルのISIマーク・BIS認定の鉄鋼製品。",
+    "q2_title": "迅速な配送",
+    "q2_desc": "信頼できる物流パートナーによるインド全土配送。",
+    "q3_title": "最高の価格",
+    "q3_desc": "競争力のある市場価格。大量割引あり。",
+    "q4_title": "専任サポート",
+    "q4_desc": "10年以上の業界経験。週6日WhatsAppサポート。"
+  },
+  "footer": {
+    "description": "良質な鉄鋼製品の信頼できるパートナー。TMTバー、MSパイプ、シート、構造用鋼でインドの産業に貢献。",
+    "quick_links": "クイックリンク",
+    "products": "製品",
+    "contact_info": "連絡先情報",
+    "whatsapp_us": "WhatsAppで連絡",
+    "rights": "全著作権所有。",
+    "tagline": "高品質鉄鋼製品 | インド全土配送"
+  },
+  "filter": {
+    "title": "製品を絞り込む",
+    "active": "適用中",
+    "clear_all": "すべてクリア",
+    "products": "件の製品",
+    "category": "カテゴリ",
+    "subcategory": "サブカテゴリ",
+    "type": "タイプ",
+    "dimension": "寸法 / サイズ",
+    "all_categories": "すべてのカテゴリ",
+    "all_subcategories": "すべてのサブカテゴリ",
+    "all_types": "すべてのタイプ",
+    "all_dimensions": "すべての寸法",
+    "quick_pick": "クイック選択"
+  },
+  "cart": {
+    "title": "問い合わせカート",
+    "your_details": "お客様情報",
+    "selected_materials": "選択した工業材料",
+    "details_subtitle": "見積もりのためにこれらの情報が必要です",
+    "empty": "カートは空です",
+    "empty_desc": "製品を閲覧して問い合わせに追加してください。",
+    "selected_items": "選択中のアイテム",
+    "clear_all": "すべてクリア",
+    "proceed": "問い合わせに進む →",
+    "send_whatsapp": "WhatsAppに詳細を送る",
+    "name_label": "名前 / 会社名",
+    "phone_label": "電話番号",
+    "email_label": "メールアドレス",
+    "optional": "（任意）",
+    "name_placeholder": "氏名または会社名を入力",
+    "phone_placeholder": "電話番号を入力",
+    "email_placeholder": "正式見積もり用",
+    "quote_note": "見積もりをリクエスト中:",
+    "item": "件",
+    "items": "件",
+    "redirect_note": "WhatsAppが開き、営業チームに直接リクエストを送ります。"
+  },
+  "contact": {
+    "title": "お問い合わせ",
+    "subtitle": "価格・在庫・大量注文のご相談はこちら。WhatsAppでは通常数分以内に返信します。",
+    "get_in_touch": "お問い合わせ",
+    "send_enquiry": "問い合わせを送る",
+    "form_subtitle": "下記フォームに入力してください — 送信するとWhatsAppが開き、メッセージが事前入力されます。",
+    "name": "氏名",
+    "phone": "電話 / WhatsApp",
+    "message": "メッセージ",
+    "required": "すべての項目を入力してください。",
+    "send_button": "WhatsAppで送る",
+    "no_data": "WhatsAppが開き、メッセージが事前入力されます。データは保存されません。",
+    "name_placeholder": "お名前",
+    "phone_placeholder": "+91 XXXXX XXXXX",
+    "message_placeholder": "必要なものをお知らせください — 製品名、数量、配送先...",
+    "chat_direct": "WhatsAppで直接チャット",
+    "address": "デリー、インド — 全国配送可能"
+  },
+  "products_page": {
+    "title": "産業用ソリューション",
+    "subtitle": "高品質な鉄鋼供給から電気インフラ、持続可能なスクラップ管理まで。"
+  },
+  "product_card": {
+    "add_to_enquiry": "問い合わせに追加",
+    "added_to_enquiry": "追加済み",
+    "whatsapp": "WhatsApp",
+    "view_details": "詳細を見る →"
+  },
+  "product_tabs": {
+    "steel_products": "鉄鋼製品",
+    "wires_cables": "電線・ケーブル",
+    "sell_scrap": "スクラップを売る",
+    "no_steel": "鉄鋼製品が見つかりません",
+    "adjust_filters": "フィルターを調整してください。",
+    "load_more_steel": "さらに鉄鋼製品を読み込む",
+    "remaining": "残り",
+    "no_wires": "条件に一致する電線・ケーブルが見つかりません。",
+    "load_more_wires": "さらに電線を読み込む"
+  },
+  "scrap_form": {
+    "title": "スクラップを売る",
+    "subtitle": "以下のフォームにご記入ください。スクラップ材の最適な市場価格をご提案します。",
+    "name": "会社名 / 個人名",
+    "category": "スクラップのカテゴリ",
+    "select_category": "カテゴリを選択",
+    "quantity": "推定数量 (KG)",
+    "phone": "電話番号",
+    "email": "メールアドレス（任意）",
+    "pickup_location": "集荷場所",
+    "state": "州 / 都道府県",
+    "city": "市区町村",
+    "pincode": "郵便番号",
+    "submit": "スクラップ売却リクエストを送信",
+    "processing": "処理中...",
+    "success": "リクエスト送信完了！",
+    "success_desc": "ご連絡ありがとうございます。スクラップ売却についてご相談するため、担当チームからすぐにご連絡いたします。",
+    "submit_another": "別のリクエストを送信する"
+  },
+  "product_detail": {
+    "home": "ホーム",
+    "products": "製品",
+    "description": "説明",
+    "category": "カテゴリ",
+    "sub_category": "サブカテゴリ",
+    "type": "タイプ",
+    "dimension": "寸法",
+    "enquire_whatsapp": "WhatsAppで問い合わせる",
+    "related_products": "関連製品",
+    "product_not_found": "製品が見つかりません"
+  }
+}

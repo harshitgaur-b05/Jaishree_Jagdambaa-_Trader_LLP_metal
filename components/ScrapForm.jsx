@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { useTranslation } from '@/lib/i18n';
 
 const CATEGORIES = [
   'MS Steel',
@@ -13,6 +14,7 @@ const CATEGORIES = [
 const WA_NUMBER = process.env.NEXT_PUBLIC_WA_NUMBER || '919999999999';
 
 export default function ScrapForm() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     category: '',
@@ -68,15 +70,15 @@ Sent from: Industrial Solutions Portal`;
     return (
       <div className="bg-white dark:bg-[#1e1e1e] p-8 rounded-2xl border border-slate-200 dark:border-white/10 text-center shadow-xl max-w-2xl mx-auto">
         <div className="text-5xl mb-4">✅</div>
-        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Request Submitted!</h3>
+        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">{t('scrap_form.success')}</h3>
         <p className="text-slate-600 dark:text-slate-400 mb-6">
-          Thank you for reaching out. Our team will contact you shortly to discuss your scrap sale.
+          {t('scrap_form.success_desc')}
         </p>
         <button
           onClick={() => setSubmitted(false)}
           className="px-6 py-2 bg-[#007f5f] hover:bg-[#005f47] text-white rounded-full transition-colors"
         >
-          Submit Another Request
+          {t('scrap_form.submit_another')}
         </button>
       </div>
     );
@@ -85,9 +87,9 @@ Sent from: Industrial Solutions Portal`;
   return (
     <div className="bg-white dark:bg-[#1e1e1e] p-6 md:p-10 rounded-2xl border border-slate-200 dark:border-white/10 shadow-xl max-w-3xl mx-auto">
       <div className="mb-8">
-        <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Sell Your Scrap</h2>
+        <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">{t('scrap_form.title')}</h2>
         <p className="text-slate-600 dark:text-slate-400">
-          Fill out the form below and we'll provide you with the best market rates for your scrap materials.
+          {t('scrap_form.subtitle')}
         </p>
       </div>
 
@@ -96,7 +98,7 @@ Sent from: Industrial Solutions Portal`;
           {/* Name */}
           <div className="flex flex-col gap-2">
             <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">
-              Company / Individual Name <span className="text-red-500">*</span>
+              {t('scrap_form.name')} <span className="text-red-500">*</span>
             </label>
             <input
               required
@@ -112,7 +114,7 @@ Sent from: Industrial Solutions Portal`;
           {/* Category */}
           <div className="flex flex-col gap-2">
             <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">
-              Scrap Category <span className="text-red-500">*</span>
+              {t('scrap_form.category')} <span className="text-red-500">*</span>
             </label>
             <select
               required
@@ -121,7 +123,7 @@ Sent from: Industrial Solutions Portal`;
               onChange={handleChange}
               className="px-4 py-2.5 bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl focus:ring-2 focus:ring-[#007f5f] outline-none transition-all dark:text-white"
             >
-              <option value="" disabled className="dark:bg-[#1e1e1e] dark:text-white text-slate-900">Select Category</option>
+              <option value="" disabled className="dark:bg-[#1e1e1e] dark:text-white text-slate-900">{t('scrap_form.select_category')}</option>
               {CATEGORIES.map(cat => (
                 <option key={cat} value={cat} className="dark:bg-[#1e1e1e] dark:text-white text-slate-900">{cat}</option>
               ))}
@@ -131,7 +133,7 @@ Sent from: Industrial Solutions Portal`;
           {/* Quantity */}
           <div className="flex flex-col gap-2">
             <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">
-              Estimated Quantity (KG) <span className="text-red-500">*</span>
+              {t('scrap_form.quantity')} <span className="text-red-500">*</span>
             </label>
             <input
               required
@@ -147,7 +149,7 @@ Sent from: Industrial Solutions Portal`;
           {/* Phone */}
           <div className="flex flex-col gap-2">
             <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">
-              Phone Number <span className="text-red-500">*</span>
+              {t('scrap_form.phone')} <span className="text-red-500">*</span>
             </label>
             <input
               required
@@ -163,7 +165,7 @@ Sent from: Industrial Solutions Portal`;
           {/* Email */}
           <div className="flex flex-col gap-2">
             <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">
-              Email Address (Optional)
+              {t('scrap_form.email')}
             </label>
             <input
               type="email"
@@ -177,41 +179,41 @@ Sent from: Industrial Solutions Portal`;
         </div>
 
         <div className="pt-4 border-t border-slate-100 dark:border-white/5">
-          <h3 className="text-sm font-bold text-slate-900 dark:text-white mb-4 uppercase tracking-wider">Pickup Location</h3>
+          <h3 className="text-sm font-bold text-slate-900 dark:text-white mb-4 uppercase tracking-wider">{t('scrap_form.pickup_location')}</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex flex-col gap-2">
-              <label className="text-xs font-semibold text-slate-500 uppercase">State</label>
+              <label className="text-xs font-semibold text-slate-500 uppercase">{t('scrap_form.state')}</label>
               <input
                 required
                 type="text"
                 name="state"
                 value={formData.state}
                 onChange={handleChange}
-                placeholder="State"
+                placeholder={t('scrap_form.state')}
                 className="px-4 py-2.5 bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl focus:ring-2 focus:ring-[#007f5f] outline-none transition-all dark:text-white"
               />
             </div>
             <div className="flex flex-col gap-2">
-              <label className="text-xs font-semibold text-slate-500 uppercase">City</label>
+              <label className="text-xs font-semibold text-slate-500 uppercase">{t('scrap_form.city')}</label>
               <input
                 required
                 type="text"
                 name="city"
                 value={formData.city}
                 onChange={handleChange}
-                placeholder="City"
+                placeholder={t('scrap_form.city')}
                 className="px-4 py-2.5 bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl focus:ring-2 focus:ring-[#007f5f] outline-none transition-all dark:text-white"
               />
             </div>
             <div className="flex flex-col gap-2">
-              <label className="text-xs font-semibold text-slate-500 uppercase">Pincode</label>
+              <label className="text-xs font-semibold text-slate-500 uppercase">{t('scrap_form.pincode')}</label>
               <input
                 required
                 type="text"
                 name="pincode"
                 value={formData.pincode}
                 onChange={handleChange}
-                placeholder="Pincode"
+                placeholder={t('scrap_form.pincode')}
                 className="px-4 py-2.5 bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl focus:ring-2 focus:ring-[#007f5f] outline-none transition-all dark:text-white"
               />
             </div>
@@ -226,9 +228,9 @@ Sent from: Industrial Solutions Portal`;
           {isSubmitting ? (
             <>
               <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-              Processing...
+              {t('scrap_form.processing')}
             </>
-          ) : 'Submit Scrap Sale Request'}
+          ) : t('scrap_form.submit')}
         </button>
       </form>
     </div>

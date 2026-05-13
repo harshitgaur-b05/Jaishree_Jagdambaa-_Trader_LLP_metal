@@ -1,0 +1,170 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "products": "Produkte",
+    "contact": "Kontakt",
+    "whatsapp": "WhatsApp"
+  },
+  "hero": {
+    "badge": "Offizieller Lieferant",
+    "title1": "Ihr globaler & nationaler Partner für",
+    "title2": "Metallversorgung,",
+    "title3": "Handel",
+    "title4": "& Vertrieb",
+    "subtitle": "Vertrauenswürdige Lieferanten, Händler und inländische Trader für Stahl, MS-Rohre, TMT-Stäbe und Schrott — Beschaffung, Verarbeitung und Lieferung wichtiger Materialien in ganz Indien und weltweit.",
+    "cta_quote": "Angebot Anfordern",
+    "cta_explore": "Inventar Erkunden",
+    "trust1": "Weltweite Logistik",
+    "trust2": "ISRI-Zertifiziert",
+    "trust3": "Ethische Beschaffung",
+    "trust4": "Lieferung Gesamtindien"
+  },
+  "certificates": {
+    "title": "Unsere Zertifizierungen & Akkreditierungen",
+    "verified": "Verifiziert",
+    "view": "Details Anzeigen",
+    "download": "PDF Herunterladen"
+  },
+  "categories": {
+    "title": "Unser Produktsortiment",
+    "subtitle": "Umfassender Stahlprodukt-Katalog für Bau, Fertigung und industriellen Einsatz."
+  },
+  "featured": {
+    "title": "Empfohlene Produkte",
+    "subtitle": "Beliebte Auswahl aus unserem Katalog",
+    "view_all": "Alle Produkte anzeigen →"
+  },
+  "whatsapp_cta": {
+    "title": "Sofortangebote per WhatsApp",
+    "subtitle": "Keine Formulare. Schreiben Sie uns direkt auf WhatsApp für Preise, Verfügbarkeit und Lieferinformationen. Unser Team antwortet innerhalb von Minuten.",
+    "button": "Per WhatsApp chatten"
+  },
+  "why_us": {
+    "title": "Warum uns wählen?",
+    "q1_title": "Geprüfte Qualität",
+    "q1_desc": "ISI-gekennzeichnete und BIS-zertifizierte Stahlprodukte von vertrauenswürdigen Werken.",
+    "q2_title": "Schnelle Lieferung",
+    "q2_desc": "Lieferung in ganz Indien mit zuverlässigen Logistikpartnern.",
+    "q3_title": "Beste Preise",
+    "q3_desc": "Wettbewerbsfähige Marktpreise. Mengenrabatt verfügbar.",
+    "q4_title": "Dedizierter Support",
+    "q4_desc": "Über 10 Jahre Branchenerfahrung. WhatsApp-Support 6 Tage pro Woche."
+  },
+  "footer": {
+    "description": "Ihr vertrauenswürdiger Partner für qualitativ hochwertige Stahlprodukte. Wir beliefern Industrien in ganz Indien mit TMT-Stäben, MS-Rohren, Blechen und Konstruktionsstahl.",
+    "quick_links": "Schnelllinks",
+    "products": "Produkte",
+    "contact_info": "Kontaktinformationen",
+    "whatsapp_us": "WhatsApp",
+    "rights": "Alle Rechte vorbehalten.",
+    "tagline": "Qualitäts-Stahlprodukte | Lieferung ganz Indien"
+  },
+  "filter": {
+    "title": "Produkte Filtern",
+    "active": "Aktiv",
+    "clear_all": "Alle Löschen",
+    "products": "Produkte",
+    "category": "Kategorie",
+    "subcategory": "Unterkategorie",
+    "type": "Typ",
+    "dimension": "Abmessung / Größe",
+    "all_categories": "Alle Kategorien",
+    "all_subcategories": "Alle Unterkategorien",
+    "all_types": "Alle Typen",
+    "all_dimensions": "Alle Abmessungen",
+    "quick_pick": "Schnellauswahl"
+  },
+  "cart": {
+    "title": "Anfrage-Warenkorb",
+    "your_details": "Ihre Angaben",
+    "selected_materials": "Ausgewählte Industriematerialien",
+    "details_subtitle": "Wir benötigen diese Angaben, um Ihnen ein Angebot zu senden",
+    "empty": "Ihr Warenkorb ist leer",
+    "empty_desc": "Durchsuchen Sie unsere Produkte und fügen Sie sie Ihrer Anfrage hinzu.",
+    "selected_items": "Ausgewählte Artikel",
+    "clear_all": "Alle Löschen",
+    "proceed": "Zur Anfrage fortfahren →",
+    "send_whatsapp": "Details per WhatsApp senden",
+    "name_label": "Name / Unternehmen",
+    "phone_label": "Telefonnummer",
+    "email_label": "E-Mail-Adresse",
+    "optional": "(Optional)",
+    "name_placeholder": "Vollständigen Namen oder Unternehmen eingeben",
+    "phone_placeholder": "Handynummer eingeben",
+    "email_placeholder": "Für formale Angebote",
+    "quote_note": "Sie fordern ein Angebot für",
+    "item": "Artikel",
+    "items": "Artikel",
+    "redirect_note": "Dies leitet Sie zu WhatsApp weiter, um die formale Anfrage direkt an unser Vertriebsteam zu senden."
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Kontaktieren Sie uns für Preise, Verfügbarkeit oder Großbestellungen. Wir antworten normalerweise innerhalb von Minuten auf WhatsApp.",
+    "get_in_touch": "Kontakt Aufnehmen",
+    "send_enquiry": "Anfrage Senden",
+    "form_subtitle": "Füllen Sie das Formular aus — beim Klicken auf Senden öffnet sich WhatsApp mit Ihrer vorausgefüllten Nachricht.",
+    "name": "Vollständiger Name",
+    "phone": "Telefon / WhatsApp",
+    "message": "Nachricht",
+    "required": "Bitte füllen Sie alle Felder aus.",
+    "send_button": "Per WhatsApp senden",
+    "no_data": "WhatsApp öffnet sich mit Ihrer vorausgefüllten Nachricht. Es werden keine Daten gespeichert.",
+    "name_placeholder": "Ihr Name",
+    "phone_placeholder": "+91 XXXXX XXXXX",
+    "message_placeholder": "Sagen Sie uns, was Sie benötigen — Produktname, Menge, Lieferort...",
+    "chat_direct": "Direkt per WhatsApp chatten",
+    "address": "Delhi, Indien — Lieferung in ganz Indien verfügbar"
+  },
+  "products_page": {
+    "title": "Industrielösungen",
+    "subtitle": "Von erstklassiger Stahlversorgung bis hin zu elektrischer Infrastruktur und nachhaltigem Schrottmanagement."
+  },
+  "product_card": {
+    "add_to_enquiry": "Zur Anfrage hinzufügen",
+    "added_to_enquiry": "Hinzugefügt",
+    "whatsapp": "WhatsApp",
+    "view_details": "Details ansehen →"
+  },
+  "product_tabs": {
+    "steel_products": "Stahlprodukte",
+    "wires_cables": "Drähte & Kabel",
+    "sell_scrap": "Schrott verkaufen",
+    "no_steel": "Keine Produkte gefunden",
+    "adjust_filters": "Versuchen Sie, Ihre Filter anzupassen.",
+    "load_more_steel": "Mehr Produkte laden",
+    "remaining": "verbleibend",
+    "no_wires": "Keine Kabel gefunden.",
+    "load_more_wires": "Mehr Kabel laden"
+  },
+  "scrap_form": {
+    "title": "Verkaufen Sie Ihren Schrott",
+    "subtitle": "Füllen Sie das Formular aus und wir bieten Ihnen die besten Marktpreise.",
+    "name": "Unternehmen / Name",
+    "category": "Schrottkategorie",
+    "select_category": "Kategorie auswählen",
+    "quantity": "Geschätzte Menge (KG)",
+    "phone": "Telefon",
+    "email": "E-Mail (Optional)",
+    "pickup_location": "Abholort",
+    "state": "Bundesland",
+    "city": "Stadt",
+    "pincode": "Postleitzahl",
+    "submit": "Anfrage Senden",
+    "processing": "Verarbeitung...",
+    "success": "Anfrage Gesendet!",
+    "success_desc": "Danke für Ihre Kontaktaufnahme. Unser Team wird sich bald melden.",
+    "submit_another": "Weitere Anfrage senden"
+  },
+  "product_detail": {
+    "home": "Startseite",
+    "products": "Produkte",
+    "description": "Beschreibung",
+    "category": "Kategorie",
+    "sub_category": "Unterkategorie",
+    "type": "Typ",
+    "dimension": "Abmessung",
+    "enquire_whatsapp": "Über WhatsApp anfragen",
+    "related_products": "Ähnliche Produkte",
+    "product_not_found": "Produkt nicht gefunden"
+  }
+}

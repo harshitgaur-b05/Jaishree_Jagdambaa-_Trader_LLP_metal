@@ -1,0 +1,170 @@
+{
+  "nav": {
+    "home": "首页",
+    "products": "产品",
+    "contact": "联系我们",
+    "whatsapp": "WhatsApp"
+  },
+  "hero": {
+    "badge": "官方供应商",
+    "title1": "您在金属供应、贸易",
+    "title2": "与分销领域的",
+    "title3": "全球与国内合作伙伴",
+    "title4": "& 分销",
+    "subtitle": "值得信赖的钢铁、MS管材、TMT棒材和废料供应商与贸易商——在印度全境及全球范围内采购、加工和配送重要材料。",
+    "cta_quote": "请求报价",
+    "cta_explore": "浏览库存",
+    "trust1": "全球物流",
+    "trust2": "ISRI认证",
+    "trust3": "道德采购",
+    "trust4": "印度全境配送"
+  },
+  "certificates": {
+    "title": "我们的合规认证与资质",
+    "verified": "已验证",
+    "view": "查看详情",
+    "download": "下载PDF"
+  },
+  "categories": {
+    "title": "我们的产品系列",
+    "subtitle": "面向建筑、制造和工业用途的全面钢铁产品目录。"
+  },
+  "featured": {
+    "title": "精选产品",
+    "subtitle": "目录中的热门选择",
+    "view_all": "查看所有产品 →"
+  },
+  "whatsapp_cta": {
+    "title": "通过WhatsApp即时获取报价",
+    "subtitle": "无需填写表单。直接在WhatsApp上联系我们，获取价格、库存和配送信息。我们的团队将在几分钟内回复。",
+    "button": "在WhatsApp上与我们聊天"
+  },
+  "why_us": {
+    "title": "为什么选择我们？",
+    "q1_title": "质量有保障",
+    "q1_desc": "来自可信赖工厂的ISI标记和BIS认证钢铁产品。",
+    "q2_title": "快速配送",
+    "q2_desc": "与可靠的物流合作伙伴实现印度全境配送。",
+    "q3_title": "最优价格",
+    "q3_desc": "具有竞争力的市场价格。提供批量折扣。",
+    "q4_title": "专属支持",
+    "q4_desc": "10年以上行业经验。每周6天WhatsApp支持。"
+  },
+  "footer": {
+    "description": "您值得信赖的优质钢铁产品合作伙伴。为印度各地行业提供优质TMT棒材、MS管材、钢板和结构钢。",
+    "quick_links": "快速链接",
+    "products": "产品",
+    "contact_info": "联系信息",
+    "whatsapp_us": "WhatsApp联系我们",
+    "rights": "保留所有权利。",
+    "tagline": "优质钢铁产品 | 印度全境配送"
+  },
+  "filter": {
+    "title": "筛选产品",
+    "active": "已激活",
+    "clear_all": "清除全部",
+    "products": "个产品",
+    "category": "类别",
+    "subcategory": "子类别",
+    "type": "类型",
+    "dimension": "尺寸 / 规格",
+    "all_categories": "所有类别",
+    "all_subcategories": "所有子类别",
+    "all_types": "所有类型",
+    "all_dimensions": "所有尺寸",
+    "quick_pick": "快速选择"
+  },
+  "cart": {
+    "title": "询价购物车",
+    "your_details": "您的信息",
+    "selected_materials": "已选工业材料",
+    "details_subtitle": "我们需要这些信息为您发送报价",
+    "empty": "您的购物车是空的",
+    "empty_desc": "浏览我们的产品并将其添加到询价中。",
+    "selected_items": "已选商品",
+    "clear_all": "清除全部",
+    "proceed": "继续询价 →",
+    "send_whatsapp": "通过WhatsApp发送详情",
+    "name_label": "姓名 / 公司",
+    "phone_label": "电话号码",
+    "email_label": "电子邮件",
+    "optional": "（可选）",
+    "name_placeholder": "输入全名或公司名称",
+    "phone_placeholder": "输入手机号码",
+    "email_placeholder": "用于正式报价",
+    "quote_note": "您正在请求报价，共",
+    "item": "件商品",
+    "items": "件商品",
+    "redirect_note": "这将把您重定向到WhatsApp，直接向我们的销售团队发送正式请求。"
+  },
+  "contact": {
+    "title": "联系我们",
+    "subtitle": "联系我们获取价格、库存或批量询价。我们通常在几分钟内通过WhatsApp回复。",
+    "get_in_touch": "取得联系",
+    "send_enquiry": "发送询价",
+    "form_subtitle": "填写下面的表单——点击发送将打开WhatsApp并预填您的消息。",
+    "name": "全名",
+    "phone": "电话 / WhatsApp",
+    "message": "消息",
+    "required": "请填写所有字段。",
+    "send_button": "通过WhatsApp发送",
+    "no_data": "WhatsApp将打开并预填您的消息。不存储任何数据。",
+    "name_placeholder": "您的姓名",
+    "phone_placeholder": "+91 XXXXX XXXXX",
+    "message_placeholder": "告诉我们您需要什么——产品名称、数量、配送地点...",
+    "chat_direct": "直接在WhatsApp上聊天",
+    "address": "印度德里——提供全印度配送"
+  },
+  "products_page": {
+    "title": "工业解决方案",
+    "subtitle": "从优质钢铁供应到电力基础设施和可持续废料管理。"
+  },
+  "product_card": {
+    "add_to_enquiry": "加入询价",
+    "added_to_enquiry": "已加入",
+    "whatsapp": "WhatsApp",
+    "view_details": "查看详情 →"
+  },
+  "product_tabs": {
+    "steel_products": "钢铁产品",
+    "wires_cables": "电线电缆",
+    "sell_scrap": "出售废料",
+    "no_steel": "未找到产品",
+    "adjust_filters": "请尝试调整您的过滤器。",
+    "load_more_steel": "加载更多产品",
+    "remaining": "剩余",
+    "no_wires": "未找到电缆。",
+    "load_more_wires": "加载更多电缆"
+  },
+  "scrap_form": {
+    "title": "出售您的废料",
+    "subtitle": "填写表格，我们将为您提供最佳市场价格。",
+    "name": "公司 / 姓名",
+    "category": "废料类别",
+    "select_category": "选择类别",
+    "quantity": "估计数量 (KG)",
+    "phone": "电话号码",
+    "email": "电子邮件 (可选)",
+    "pickup_location": "提货地点",
+    "state": "省 / 州",
+    "city": "城市",
+    "pincode": "邮政编码",
+    "submit": "提交请求",
+    "processing": "处理中...",
+    "success": "请求已提交！",
+    "success_desc": "感谢您联系我们。我们的团队将很快与您联系。",
+    "submit_another": "提交另一个请求"
+  },
+  "product_detail": {
+    "home": "首页",
+    "products": "产品",
+    "description": "描述",
+    "category": "类别",
+    "sub_category": "子类别",
+    "type": "类型",
+    "dimension": "尺寸",
+    "enquire_whatsapp": "在WhatsApp上询价",
+    "related_products": "相关产品",
+    "product_not_found": "未找到产品"
+  }
+}

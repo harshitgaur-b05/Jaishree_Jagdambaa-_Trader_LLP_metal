@@ -1,0 +1,170 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "contact": "Contact",
+    "whatsapp": "WhatsApp"
+  },
+  "hero": {
+    "badge": "Official Supplier",
+    "title1": "Your Global & Domestic Partner in",
+    "title2": "Metal Supply,",
+    "title3": "Trade",
+    "title4": "& Distribution",
+    "subtitle": "Trusted suppliers, merchandisers & domestic traders of steel, MS pipes, TMT bars and scrap — sourcing, processing and delivering essential materials across India and worldwide.",
+    "cta_quote": "Request a Quote",
+    "cta_explore": "Explore Inventory",
+    "trust1": "Worldwide Logistics",
+    "trust2": "ISRI Certified",
+    "trust3": "Ethical Sourcing",
+    "trust4": "Pan India Delivery"
+  },
+  "certificates": {
+    "title": "Our Verified Compliance & Accreditations",
+    "verified": "Verified",
+    "view": "View Details",
+    "download": "Download PDF"
+  },
+  "categories": {
+    "title": "Our Product Range",
+    "subtitle": "Comprehensive steel product catalogue for construction, fabrication, and industrial use."
+  },
+  "featured": {
+    "title": "Featured Products",
+    "subtitle": "Popular picks from our catalogue",
+    "view_all": "View all products →"
+  },
+  "whatsapp_cta": {
+    "title": "Get Instant Quotes on WhatsApp",
+    "subtitle": "Skip the forms. Message us directly on WhatsApp for pricing, availability, and delivery info. Our team responds within minutes.",
+    "button": "Chat with us on WhatsApp"
+  },
+  "why_us": {
+    "title": "Why Choose Us?",
+    "q1_title": "Verified Quality",
+    "q1_desc": "ISI marked and BIS certified steel products from trusted mills.",
+    "q2_title": "Fast Delivery",
+    "q2_desc": "Pan India delivery with reliable logistics partners.",
+    "q3_title": "Best Prices",
+    "q3_desc": "Competitive market rates. Bulk discount available.",
+    "q4_title": "Dedicated Support",
+    "q4_desc": "10+ years of industry experience. WhatsApp support 6 days a week."
+  },
+  "footer": {
+    "description": "Your trusted partner for quality steel products. Serving industries across India with premium TMT bars, MS pipes, sheets, and structural steel.",
+    "quick_links": "Quick Links",
+    "products": "Products",
+    "contact_info": "Contact Info",
+    "whatsapp_us": "WhatsApp Us",
+    "rights": "All rights reserved.",
+    "tagline": "Quality Steel Products | Pan India Delivery"
+  },
+  "filter": {
+    "title": "Filter Products",
+    "active": "Active",
+    "clear_all": "Clear All",
+    "products": "products",
+    "category": "Category",
+    "subcategory": "Sub-Category",
+    "type": "Type",
+    "dimension": "Dimension / Size",
+    "all_categories": "All Categories",
+    "all_subcategories": "All Sub-Categories",
+    "all_types": "All Types",
+    "all_dimensions": "All Dimensions",
+    "quick_pick": "Quick Pick"
+  },
+  "cart": {
+    "title": "Enquiry Cart",
+    "your_details": "Your Details",
+    "selected_materials": "Selected industrial materials",
+    "details_subtitle": "We need these details to send you a quote",
+    "empty": "Your cart is empty",
+    "empty_desc": "Browse our products and add them to your enquiry.",
+    "selected_items": "Selected Items",
+    "clear_all": "Clear All",
+    "proceed": "Proceed to Enquiry →",
+    "send_whatsapp": "Send Details to WhatsApp",
+    "name_label": "Name / Company",
+    "phone_label": "Phone Number",
+    "email_label": "Email Address",
+    "optional": "(Optional)",
+    "name_placeholder": "Enter full name or company",
+    "phone_placeholder": "Enter mobile number",
+    "email_placeholder": "For formal quotations",
+    "quote_note": "You are requesting a quote for",
+    "item": "item",
+    "items": "items",
+    "redirect_note": "This will redirect you to WhatsApp to send the formal request directly to our sales team."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Reach out for pricing, availability, or bulk enquiries. We typically respond within minutes on WhatsApp.",
+    "get_in_touch": "Get in Touch",
+    "send_enquiry": "Send an Enquiry",
+    "form_subtitle": "Fill out the form below — clicking send will open WhatsApp with your message pre-filled.",
+    "name": "Full Name",
+    "phone": "Phone / WhatsApp",
+    "message": "Message",
+    "required": "Please fill in all fields.",
+    "send_button": "Send via WhatsApp",
+    "no_data": "This will open WhatsApp with your message pre-filled. No data is stored.",
+    "name_placeholder": "Your name",
+    "phone_placeholder": "+91 XXXXX XXXXX",
+    "message_placeholder": "Tell us what you need — product name, quantity, delivery location...",
+    "chat_direct": "Chat Directly on WhatsApp",
+    "address": "Delhi, India — Pan India delivery available"
+  },
+  "products_page": {
+    "title": "Industrial Solutions",
+    "subtitle": "From premium steel supply to electrical infrastructure and sustainable scrap management."
+  },
+  "product_card": {
+    "add_to_enquiry": "Add to Enquiry",
+    "added_to_enquiry": "Added to Enquiry",
+    "whatsapp": "WhatsApp",
+    "view_details": "View Details →"
+  },
+  "product_tabs": {
+    "steel_products": "Steel Products",
+    "wires_cables": "Wires & Cables",
+    "sell_scrap": "Sell Scrap",
+    "no_steel": "No steel products found",
+    "adjust_filters": "Try adjusting your filters.",
+    "load_more_steel": "Load More Steel Products",
+    "remaining": "remaining",
+    "no_wires": "No wires & cables found matching your selection.",
+    "load_more_wires": "Load More Wires"
+  },
+  "scrap_form": {
+    "title": "Sell Your Scrap",
+    "subtitle": "Fill out the form below and we'll provide you with the best market rates for your scrap materials.",
+    "name": "Company / Individual Name",
+    "category": "Scrap Category",
+    "select_category": "Select Category",
+    "quantity": "Estimated Quantity (KG)",
+    "phone": "Phone Number",
+    "email": "Email Address (Optional)",
+    "pickup_location": "Pickup Location",
+    "state": "State",
+    "city": "City",
+    "pincode": "Pincode",
+    "submit": "Submit Scrap Sale Request",
+    "processing": "Processing...",
+    "success": "Request Submitted!",
+    "success_desc": "Thank you for reaching out. Our team will contact you shortly to discuss your scrap sale.",
+    "submit_another": "Submit Another Request"
+  },
+  "product_detail": {
+    "home": "Home",
+    "products": "Products",
+    "description": "Description",
+    "category": "Category",
+    "sub_category": "Sub-Category",
+    "type": "Type",
+    "dimension": "Dimension",
+    "enquire_whatsapp": "Enquire on WhatsApp",
+    "related_products": "Related Products",
+    "product_not_found": "Product Not Found"
+  }
+}

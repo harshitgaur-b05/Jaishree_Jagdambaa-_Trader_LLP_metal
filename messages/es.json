@@ -1,0 +1,170 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "products": "Productos",
+    "contact": "Contacto",
+    "whatsapp": "WhatsApp"
+  },
+  "hero": {
+    "badge": "Proveedor Oficial",
+    "title1": "Tu socio global y nacional en",
+    "title2": "Suministro de Metal,",
+    "title3": "Comercio",
+    "title4": "y Distribución",
+    "subtitle": "Proveedores, comerciantes y distribuidores nacionales de confianza en acero, tuberías MS, barras TMT y chatarra — abasteciendo, procesando y entregando materiales esenciales en India y en todo el mundo.",
+    "cta_quote": "Solicitar Cotización",
+    "cta_explore": "Explorar Inventario",
+    "trust1": "Logística Mundial",
+    "trust2": "Certificado ISRI",
+    "trust3": "Abastecimiento Ético",
+    "trust4": "Entrega en toda India"
+  },
+  "certificates": {
+    "title": "Nuestras Certificaciones y Acreditaciones",
+    "verified": "Verificado",
+    "view": "Ver Detalles",
+    "download": "Descargar PDF"
+  },
+  "categories": {
+    "title": "Nuestra Gama de Productos",
+    "subtitle": "Catálogo completo de productos de acero para construcción, fabricación y uso industrial."
+  },
+  "featured": {
+    "title": "Productos Destacados",
+    "subtitle": "Los más populares de nuestro catálogo",
+    "view_all": "Ver todos los productos →"
+  },
+  "whatsapp_cta": {
+    "title": "Obtén Cotizaciones Instantáneas por WhatsApp",
+    "subtitle": "Sin formularios. Escríbenos directamente por WhatsApp para precios, disponibilidad e información de entrega. Nuestro equipo responde en minutos.",
+    "button": "Chatear por WhatsApp"
+  },
+  "why_us": {
+    "title": "¿Por qué elegirnos?",
+    "q1_title": "Calidad Verificada",
+    "q1_desc": "Productos de acero con marca ISI y certificación BIS de fábricas confiables.",
+    "q2_title": "Entrega Rápida",
+    "q2_desc": "Entrega en toda India con socios logísticos confiables.",
+    "q3_title": "Mejores Precios",
+    "q3_desc": "Tarifas de mercado competitivas. Descuento por volumen disponible.",
+    "q4_title": "Soporte Dedicado",
+    "q4_desc": "Más de 10 años de experiencia. Soporte por WhatsApp 6 días a la semana."
+  },
+  "footer": {
+    "description": "Tu socio de confianza para productos de acero de calidad. Sirviendo a industrias en toda India con barras TMT, tuberías MS, láminas y acero estructural.",
+    "quick_links": "Enlaces Rápidos",
+    "products": "Productos",
+    "contact_info": "Información de Contacto",
+    "whatsapp_us": "Escríbenos por WhatsApp",
+    "rights": "Todos los derechos reservados.",
+    "tagline": "Productos de Acero de Calidad | Entrega en toda India"
+  },
+  "filter": {
+    "title": "Filtrar Productos",
+    "active": "Activo",
+    "clear_all": "Limpiar Todo",
+    "products": "productos",
+    "category": "Categoría",
+    "subcategory": "Subcategoría",
+    "type": "Tipo",
+    "dimension": "Dimensión / Tamaño",
+    "all_categories": "Todas las Categorías",
+    "all_subcategories": "Todas las Subcategorías",
+    "all_types": "Todos los Tipos",
+    "all_dimensions": "Todas las Dimensiones",
+    "quick_pick": "Selección Rápida"
+  },
+  "cart": {
+    "title": "Carrito de Consulta",
+    "your_details": "Tus Datos",
+    "selected_materials": "Materiales industriales seleccionados",
+    "details_subtitle": "Necesitamos estos datos para enviarte una cotización",
+    "empty": "Tu carrito está vacío",
+    "empty_desc": "Explora nuestros productos y agrégalos a tu consulta.",
+    "selected_items": "Artículos Seleccionados",
+    "clear_all": "Limpiar Todo",
+    "proceed": "Proceder a la Consulta →",
+    "send_whatsapp": "Enviar Datos por WhatsApp",
+    "name_label": "Nombre / Empresa",
+    "phone_label": "Número de Teléfono",
+    "email_label": "Correo Electrónico",
+    "optional": "(Opcional)",
+    "name_placeholder": "Ingresa nombre completo o empresa",
+    "phone_placeholder": "Ingresa número de móvil",
+    "email_placeholder": "Para cotizaciones formales",
+    "quote_note": "Estás solicitando una cotización para",
+    "item": "artículo",
+    "items": "artículos",
+    "redirect_note": "Esto te redirigirá a WhatsApp para enviar la solicitud directamente a nuestro equipo de ventas."
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "subtitle": "Comunícate para consultas de precios, disponibilidad o pedidos al por mayor. Normalmente respondemos en minutos por WhatsApp.",
+    "get_in_touch": "Ponerse en Contacto",
+    "send_enquiry": "Enviar una Consulta",
+    "form_subtitle": "Completa el formulario — al hacer clic en enviar se abrirá WhatsApp con tu mensaje prellenado.",
+    "name": "Nombre Completo",
+    "phone": "Teléfono / WhatsApp",
+    "message": "Mensaje",
+    "required": "Por favor completa todos los campos.",
+    "send_button": "Enviar por WhatsApp",
+    "no_data": "Se abrirá WhatsApp con tu mensaje prellenado. No se almacenan datos.",
+    "name_placeholder": "Tu nombre",
+    "phone_placeholder": "+91 XXXXX XXXXX",
+    "message_placeholder": "Dinos qué necesitas — nombre del producto, cantidad, lugar de entrega...",
+    "chat_direct": "Chatear Directamente por WhatsApp",
+    "address": "Delhi, India — Entrega disponible en toda India"
+  },
+  "products_page": {
+    "title": "Soluciones Industriales",
+    "subtitle": "Desde suministro de acero premium hasta infraestructura eléctrica y gestión sostenible de chatarra."
+  },
+  "product_card": {
+    "add_to_enquiry": "Añadir a Consulta",
+    "added_to_enquiry": "Añadido",
+    "whatsapp": "WhatsApp",
+    "view_details": "Ver Detalles →"
+  },
+  "product_tabs": {
+    "steel_products": "Productos de Acero",
+    "wires_cables": "Cables y Alambres",
+    "sell_scrap": "Vender Chatarra",
+    "no_steel": "No se encontraron productos",
+    "adjust_filters": "Intenta ajustar tus filtros.",
+    "load_more_steel": "Cargar más productos",
+    "remaining": "restantes",
+    "no_wires": "No se encontraron cables.",
+    "load_more_wires": "Cargar más cables"
+  },
+  "scrap_form": {
+    "title": "Vende tu Chatarra",
+    "subtitle": "Completa el formulario y te daremos las mejores tarifas del mercado.",
+    "name": "Empresa / Nombre",
+    "category": "Categoría de Chatarra",
+    "select_category": "Seleccionar Categoría",
+    "quantity": "Cantidad Estimada (KG)",
+    "phone": "Teléfono",
+    "email": "Email (Opcional)",
+    "pickup_location": "Lugar de Recogida",
+    "state": "Estado",
+    "city": "Ciudad",
+    "pincode": "Código Postal",
+    "submit": "Enviar Solicitud",
+    "processing": "Procesando...",
+    "success": "¡Solicitud Enviada!",
+    "success_desc": "Gracias por contactarnos. Nuestro equipo te llamará pronto.",
+    "submit_another": "Enviar Otra Solicitud"
+  },
+  "product_detail": {
+    "home": "Inicio",
+    "products": "Productos",
+    "description": "Descripción",
+    "category": "Categoría",
+    "sub_category": "Subcategoría",
+    "type": "Tipo",
+    "dimension": "Dimensión",
+    "enquire_whatsapp": "Consultar por WhatsApp",
+    "related_products": "Productos Relacionados",
+    "product_not_found": "Producto no encontrado"
+  }
+}

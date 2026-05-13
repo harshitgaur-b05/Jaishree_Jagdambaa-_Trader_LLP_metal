@@ -1,11 +1,25 @@
-import Link from 'next/link';
+'use client';
 
-const COMPANY = process.env.NEXT_PUBLIC_COMPANY_NAME || 'Jaishree Jagdambaa Trader LLP';
+import Link from 'next/link';
+import { useTranslation } from '@/lib/i18n';
+
 const EMAIL = process.env.NEXT_PUBLIC_COMPANY_EMAIL || 'info@steelmart.in';
 const PHONE = process.env.NEXT_PUBLIC_COMPANY_PHONE || '+91 99999 99999';
 const WA_NUMBER = process.env.NEXT_PUBLIC_WA_NUMBER || '919999999999';
 
 export default function Footer() {
+  const { t } = useTranslation();
+
+  const QUICK_LINKS = [
+    { href: '/', label: t('nav.home') },
+    { href: '/products', label: t('nav.products') },
+    { href: '/contact', label: t('nav.contact') },
+  ];
+
+  const PRODUCT_CATS = [
+    'TMT Bars', 'MS Pipes', 'Steel Sheets', 'Angle Iron', 'Channel Steel', 'MS Flats & Rounds',
+  ];
+
   return (
     <footer className="bg-muted border-t border-border transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-12">
@@ -30,19 +44,15 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Your trusted partner for quality steel products. Serving industries across India with premium TMT bars, MS pipes, sheets, and structural steel.
+              {t('footer.description')}
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-foreground font-semibold text-sm uppercase tracking-wider mb-4">Quick Links</h3>
+            <h3 className="text-foreground font-semibold text-sm uppercase tracking-wider mb-4">{t('footer.quick_links')}</h3>
             <ul className="space-y-2">
-              {[
-                { href: '/', label: 'Home' },
-                { href: '/products', label: 'Products' },
-                { href: '/contact', label: 'Contact Us' },
-              ].map(({ href, label }) => (
+              {QUICK_LINKS.map(({ href, label }) => (
                 <li key={href}>
                   <Link href={href} className="text-sm text-muted-foreground hover:text-[#10b981] dark:hover:text-white transition-colors">
                     {label}
@@ -54,16 +64,9 @@ export default function Footer() {
 
           {/* Products */}
           <div>
-            <h3 className="text-foreground font-semibold text-sm uppercase tracking-wider mb-4">Products</h3>
+            <h3 className="text-foreground font-semibold text-sm uppercase tracking-wider mb-4">{t('footer.products')}</h3>
             <ul className="space-y-2">
-              {[
-                'TMT Bars',
-                'MS Pipes',
-                'Steel Sheets',
-                'Angle Iron',
-                'Channel Steel',
-                'MS Flats & Rounds',
-              ].map((cat) => (
+              {PRODUCT_CATS.map((cat) => (
                 <li key={cat}>
                   <Link
                     href={`/products?category=${encodeURIComponent(cat)}`}
@@ -78,7 +81,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-foreground font-semibold text-sm uppercase tracking-wider mb-4">Contact Info</h3>
+            <h3 className="text-foreground font-semibold text-sm uppercase tracking-wider mb-4">{t('footer.contact_info')}</h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-2">
                 <span className="text-[#10b981] mt-0.5">📞</span>
@@ -100,7 +103,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="text-sm text-muted-foreground hover:text-[#10b981] dark:hover:text-[#10b981] transition-colors"
                 >
-                  WhatsApp Us
+                  {t('footer.whatsapp_us')}
                 </a>
               </li>
             </ul>
@@ -109,8 +112,8 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-10 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-muted-foreground">
-          <p>© {new Date().getFullYear()} {COMPANY}. All rights reserved.</p>
-          <p>Quality Steel Products | Pan India Delivery</p>
+          <p>© {new Date().getFullYear()} Jaishree Jagdambaa Trader LLP. {t('footer.rights')}</p>
+          <p>{t('footer.tagline')}</p>
         </div>
       </div>
     </footer>
