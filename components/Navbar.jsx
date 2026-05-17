@@ -35,10 +35,10 @@ export default function Navbar() {
           </div>
 
           <div className="flex flex-col">
-            <span className="text-foreground font-black text-xs sm:text-sm md:text-lg tracking-tight leading-none uppercase">
-              <span className="text-[#10b981]">Jaishree Jagdambaa</span>
+            <span className="text-[#10b981] font-black text-xs sm:text-sm md:text-lg tracking-tight leading-tight uppercase">
+              Jaishree Jagdambaa
             </span>
-            <span className="text-muted-foreground font-bold text-[8px] sm:text-[10px] tracking-[0.15em] uppercase mt-0.5 sm:mt-1">
+            <span className="text-[#10b981] font-black text-xs sm:text-sm md:text-lg tracking-tight leading-tight uppercase">
               Trader LLP
             </span>
           </div>

@@ -32,10 +32,10 @@ export default function Footer() {
                 <Image src="/logo.png" alt="Jaishree Jagdambaa Trader LLP" fill className="object-contain" sizes="40px" />
               </div>
               <div className="flex flex-col">
-                <span className="text-foreground font-black text-sm uppercase tracking-tight leading-none">
-                  Jaishree <span className="text-[#10b981]">Jagdambaa</span>
+                <span className="text-[#10b981] font-black text-sm uppercase tracking-tight leading-tight">
+                  Jaishree Jagdambaa
                 </span>
-                <span className="text-muted-foreground font-bold text-[9px] tracking-[0.1em] uppercase mt-0.5">
+                <span className="text-[#10b981] font-black text-sm uppercase tracking-tight leading-tight">
                   Trader LLP
                 </span>
               </div>

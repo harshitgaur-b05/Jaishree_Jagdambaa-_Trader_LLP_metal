@@ -94,9 +94,9 @@ export default function HomePage() {
                 <span className="w-1.5 h-1.5 rounded-full bg-[#10b981] animate-pulse"></span>
                 {t('hero.badge')}
               </span>
-              <h2 className="text-white font-black text-xl md:text-2xl tracking-tighter uppercase leading-none drop-shadow-lg">
-                <span className="text-[#10b981]">Jaishree Jagdambaa</span>
-                <span className="block text-[10px] md:text-xs text-white/60 font-bold tracking-[0.3em] mt-1">Trader LLP</span>
+              <h2 className="text-[#10b981] font-black text-xl md:text-2xl tracking-tighter uppercase leading-tight drop-shadow-lg flex flex-col items-center">
+                <span>Jaishree Jagdambaa</span>
+                <span>Trader LLP</span>
               </h2>
             </div>
 
