@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 
 const WA_NUMBER = process.env.NEXT_PUBLIC_WA_NUMBER || '919999999999';
 
+const WIRE_TYPES = ['Project Wires', 'Aluminium Service Wires', 'Others'];
 const THICKNESS_OPTIONS = ['0.75 mm', '1 mm', '1.5 mm', '2.5 mm', '4 mm', '6 mm'];
 const ROLL_OPTIONS = ['100 m', '200 m', '300 m'];
 
@@ -20,6 +21,7 @@ export default function WiresEnquiryForm({ compact = false }) {
     state: '',
     city: '',
     pincode: '',
+    wireType: '',
     thickness: '',
     rollLength: '',
     description: '',
@@ -43,6 +45,7 @@ export default function WiresEnquiryForm({ compact = false }) {
 *Email:* ${formData.email || 'N/A'}
 
 *Wire Specifications:*
+*Wire Type:* ${formData.wireType}
 *Thickness:* ${formData.thickness}
 *Roll Length:* ${formData.rollLength}
 
@@ -101,6 +104,25 @@ Sent from: Industrial Solutions Portal`;
           <h3 className="md:col-span-2 text-sm font-bold text-amber-800 dark:text-amber-300 uppercase tracking-wider flex items-center gap-2">
             <span>⚡</span> Wire Specifications
           </h3>
+
+          {/* Wire Type */}
+          <div className="md:col-span-2">
+            <label className={LABEL_CLASS}>
+              Wire Type <span className="text-red-500">*</span>
+            </label>
+            <select
+              required
+              name="wireType"
+              value={formData.wireType}
+              onChange={handleChange}
+              className={INPUT_CLASS}
+            >
+              <option value="" disabled className="dark:bg-[#1e1e1e]">Select wire type</option>
+              {WIRE_TYPES.map((t) => (
+                <option key={t} value={t} className="dark:bg-[#1e1e1e]">{t}</option>
+              ))}
+            </select>
+          </div>
 
           {/* Thickness */}
           <div>
