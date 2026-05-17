@@ -101,16 +101,14 @@ export default function HomePage() {
             </div>
 
             <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold leading-[1.1] mb-5 tracking-tight uppercase">
-              <span className="text-white inline-block">{t('hero.title1')}</span><br />
-              <span className="animate-brand-shimmer drop-shadow-md inline-block">{t('hero.title2')}</span>{' '}
-              <span className="text-white inline-block">{t('hero.title3')}</span><br />
-              <span className="text-white inline-block">
-                {t('hero.title4')}
-              </span>
+              <span className="text-white inline-block">Your Global & Domestic Partner in</span><br />
+              <span className="animate-brand-shimmer drop-shadow-md inline-block">Metal Supply,</span>{' '}
+              <span className="text-white inline-block">Steel Scrap,</span><br />
+              <span className="animate-brand-shimmer drop-shadow-md inline-block">Wires & Cables</span>
             </h1>
 
-            <p className="text-white/75 text-base md:text-lg tracking-wide mb-10 max-w-2xl leading-relaxed">
-              {t('hero.subtitle')}
+            <p className="text-white/75 text-base md:text-lg tracking-wide mb-10 max-w-3xl leading-relaxed">
+              Trusted suppliers, merchandisers & domestic traders of metal supply, steel scrap, wires & cables — sourcing, processing and delivering essential materials globally and domestically.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-10">

@@ -17,12 +17,12 @@ const COMPANY = process.env.NEXT_PUBLIC_COMPANY_NAME || 'SteelMart India';
 
 export const metadata = {
   title: {
-    template: `%s | ${COMPANY}`,
-    default: `${COMPANY} | Steel Products Supplier in Delhi`,
+    template: `%s | Jaishree Jagdambaa Trader LLP`,
+    default: `Jaishree Jagdambaa Trader LLP | Global & Domestic Metal, Scrap, Wires & Cables Partner`,
   },
   description:
-    'Premium steel products supplier — TMT Bars, MS Pipes, Steel Sheets, Angle Iron, Channel Steel. Pan India delivery. Get a quote on WhatsApp.',
-  keywords: ['TMT bars', 'MS pipes', 'steel sheets', 'angle iron', 'steel supplier', 'Delhi'],
+    'Your Trusted Global & Domestic Partner for Metal Supply, Steel Scrap, Wires & Cables. Sourcing, processing, and delivering essential materials across India and worldwide.',
+  keywords: ['metal supply', 'steel scrap', 'wires and cables', 'TMT bars', 'MS pipes', 'steel sheets', 'steel supplier', 'Delhi', 'Jaishree Jagdambaa'],
   openGraph: {
     type: 'website',
     siteName: COMPANY,
