@@ -5,7 +5,7 @@ import { useTranslation } from '@/lib/i18n';
 
 const CATEGORIES = [
   'MS Steel',
-  'Structured Steel',
+  'Structure Steel',
   'Copper',
   'Aluminium',
   'Other'

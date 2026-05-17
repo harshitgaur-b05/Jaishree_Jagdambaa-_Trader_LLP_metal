@@ -9,11 +9,11 @@ const WA_NUMBER = process.env.NEXT_PUBLIC_WA_NUMBER || '919999999999';
 
 const CATEGORIES = [
   {
-    name: 'Structured Steel',
+    name: 'Structure Steel',
     icon: '🏗️',
     desc: 'Premium Beams, Channels, Angles, and Flat bars for structural framing.',
     desktopLink: '/products?category=structured steel',
-    mobileLink: '/contact?category=Structured Steel',
+    mobileLink: '/contact?category=Structure Steel',
   },
   {
     name: 'Construction Steel',

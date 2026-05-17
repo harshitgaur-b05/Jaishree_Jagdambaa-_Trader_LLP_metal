@@ -25,7 +25,7 @@ export default function SellScrapPage() {
 
           {/* Category Chips */}
           <div className="flex flex-wrap justify-center gap-3 mt-8">
-            {['MS Steel', 'Structured Steel', 'Copper', 'Aluminium', 'Other Metals'].map((cat) => (
+            {['MS Steel', 'Structure Steel', 'Copper', 'Aluminium', 'Other Metals'].map((cat) => (
               <span
                 key={cat}
                 className="text-xs font-semibold bg-white dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10 px-4 py-1.5 rounded-full"
