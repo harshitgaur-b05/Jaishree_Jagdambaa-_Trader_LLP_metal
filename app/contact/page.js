@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { getContactFormWALink } from '@/lib/whatsapp';
 import { useTranslation } from '@/lib/i18n';
 
@@ -12,6 +13,17 @@ const MAPS_URL = process.env.NEXT_PUBLIC_MAPS_EMBED_URL || 'https://maps.google.
 function ContactForm({ t }) {
   const [form, setForm] = useState({ name: '', phone: '', message: '' });
   const [error, setError] = useState('');
+  const searchParams = useSearchParams();
+  const category = searchParams.get('category');
+
+  useEffect(() => {
+    if (category) {
+      setForm((prev) => ({
+        ...prev,
+        message: `Hi, I am interested in ${category}. Please share the price list and delivery details.`,
+      }));
+    }
+  }, [category]);
 
   function handleChange(e) {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -193,7 +205,9 @@ export default function ContactPage() {
             <p className="text-sm text-slate-500 dark:text-slate-400 mb-6">
               {t('contact.form_subtitle')}
             </p>
-            <ContactForm t={t} />
+            <Suspense fallback={<div className="h-48 flex items-center justify-center text-slate-400">Loading form...</div>}>
+              <ContactForm t={t} />
+            </Suspense>
           </div>
         </div>
       </div>

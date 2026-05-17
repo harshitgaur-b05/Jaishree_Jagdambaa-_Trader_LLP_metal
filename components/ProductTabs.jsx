@@ -8,9 +8,9 @@ import WiresEnquiryForm from './WiresEnquiryForm';
 import CablesEnquiryForm from './CablesEnquiryForm';
 import { useTranslation } from '@/lib/i18n';
 
-export default function ProductTabs({ initialProducts, filteredProducts, totalCount }) {
+export default function ProductTabs({ initialProducts, filteredProducts, totalCount, initialTab = 'steel' }) {
   const { t } = useTranslation();
-  const [activeTab, setActiveTab] = useState('steel');
+  const [activeTab, setActiveTab] = useState(initialTab);
   const [visibleSteel, setVisibleSteel] = useState(24);
 
   const steelProducts = (filteredProducts || initialProducts).filter(

@@ -19,6 +19,7 @@ export default async function ProductsPage({ searchParams }) {
   const sub = resolvedParams?.sub || '';
   const type = resolvedParams?.type || '';
   const dimension = resolvedParams?.dimension || '';
+  const tab = resolvedParams?.tab || 'steel';
 
   const allProducts = getAllProducts();
   const filteredProducts = filterProducts({ category, sub, type, dimension });
@@ -33,6 +34,7 @@ export default async function ProductsPage({ searchParams }) {
             initialProducts={allProducts} 
             filteredProducts={filteredProducts}
             totalCount={allProducts.length}
+            initialTab={tab}
           />
         </Suspense>
       </div>

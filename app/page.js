@@ -8,12 +8,48 @@ import { useTranslation } from '@/lib/i18n';
 const WA_NUMBER = process.env.NEXT_PUBLIC_WA_NUMBER || '919999999999';
 
 const CATEGORIES = [
-  { name: 'TMT Bars', icon: '🏗️', desc: 'Fe-415, Fe-500, Fe-550 grades' },
-  { name: 'MS Pipes', icon: '🔩', desc: 'Round, Square & Rectangular' },
-  { name: 'Steel Sheets', icon: '📋', desc: 'HR, CR & Galvanized sheets' },
-  { name: 'Angle Iron', icon: '📐', desc: 'Equal & Unequal angles' },
-  { name: 'Channel Steel', icon: '⚙️', desc: 'C-Channel & U-Channel' },
-  { name: 'MS Flats & Rounds', icon: '🔧', desc: 'Flat bars & round bars' },
+  {
+    name: 'Structured Steel',
+    icon: '🏗️',
+    desc: 'Premium Beams, Channels, Angles, and Flat bars for structural framing.',
+    desktopLink: '/products?category=structured steel',
+    mobileLink: '/contact?category=Structured Steel',
+  },
+  {
+    name: 'Construction Steel',
+    icon: '🏢',
+    desc: 'High-strength TMT Bars, MS Round bars, and construction grade steel.',
+    desktopLink: '/products?category=construction steel',
+    mobileLink: '/contact?category=Construction Steel',
+  },
+  {
+    name: 'Roofing Sheets',
+    icon: '🏠',
+    desc: 'Durable GI, Colour Coated, Corrugated Sheets and plates for roofing.',
+    desktopLink: '/products?category=Sheets/Plates',
+    mobileLink: '/contact?category=Roofing Sheets',
+  },
+  {
+    name: 'Electrical Wires',
+    icon: '🔌',
+    desc: 'FR, FRLF copper wires for residential and commercial projects.',
+    desktopLink: '/products?tab=wires',
+    mobileLink: '/wires',
+  },
+  {
+    name: 'Industrial Cables',
+    icon: '🔋',
+    desc: 'Multicore Flexible, XLPE Armoured, Solar and HT industrial cables.',
+    desktopLink: '/products?tab=cables',
+    mobileLink: '/cables',
+  },
+  {
+    name: 'Sell Metal Scrap',
+    icon: '♻️',
+    desc: 'Trade your MS steel, copper, aluminium scrap at best market rates.',
+    desktopLink: '/products?tab=scrap',
+    mobileLink: '/sell-scrap',
+  },
 ];
 
 const CERT_DATA = [
@@ -156,18 +192,32 @@ export default function HomePage() {
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-            {CATEGORIES.map(({ name, icon, desc }) => (
-              <Link
-                key={name}
-                href={`/products?category=${encodeURIComponent(name)}`}
-                className="group flex items-start gap-4 p-6 rounded-2xl border border-slate-200 dark:border-white/10 hover:border-[#10b981] dark:hover:border-[#10b981] bg-white dark:bg-[#18181b] hover:shadow-md dark:hover:bg-white/5 transition-all duration-300"
-              >
-                <span className="text-3xl flex-shrink-0 opacity-80 group-hover:opacity-100 transition-opacity">{icon}</span>
-                <div>
-                  <h3 className="font-semibold text-slate-900 dark:text-slate-200 text-sm group-hover:text-[#10b981] transition-colors">{name}</h3>
-                  <p className="text-xs text-slate-500 mt-1">{desc}</p>
-                </div>
-              </Link>
+            {CATEGORIES.map(({ name, icon, desc, desktopLink, mobileLink }) => (
+              <div key={name} className="h-full">
+                {/* Desktop Link (visible only on md screens and above) */}
+                <Link
+                  href={desktopLink}
+                  className="group hidden md:flex items-start gap-4 p-6 rounded-2xl border border-slate-200 dark:border-white/10 hover:border-[#10b981] dark:hover:border-[#10b981] bg-white dark:bg-[#18181b] hover:shadow-md dark:hover:bg-white/5 transition-all duration-300 h-full"
+                >
+                  <span className="text-3xl flex-shrink-0 opacity-80 group-hover:opacity-100 transition-opacity">{icon}</span>
+                  <div>
+                    <h3 className="font-semibold text-slate-900 dark:text-slate-200 text-sm group-hover:text-[#10b981] transition-colors">{name}</h3>
+                    <p className="text-xs text-slate-500 mt-1">{desc}</p>
+                  </div>
+                </Link>
+
+                {/* Mobile Link (visible only on screens smaller than md) */}
+                <Link
+                  href={mobileLink}
+                  className="group flex md:hidden items-start gap-4 p-6 rounded-2xl border border-slate-200 dark:border-white/10 hover:border-[#10b981] dark:hover:border-[#10b981] bg-white dark:bg-[#18181b] hover:shadow-md dark:hover:bg-white/5 transition-all duration-300 h-full"
+                >
+                  <span className="text-3xl flex-shrink-0 opacity-80 group-hover:opacity-100 transition-opacity">{icon}</span>
+                  <div>
+                    <h3 className="font-semibold text-slate-900 dark:text-slate-200 text-sm group-hover:text-[#10b981] transition-colors">{name}</h3>
+                    <p className="text-xs text-slate-500 mt-1">{desc}</p>
+                  </div>
+                </Link>
+              </div>
             ))}
           </div>
         </div>
