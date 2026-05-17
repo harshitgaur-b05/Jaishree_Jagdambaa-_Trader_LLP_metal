@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useTranslation } from '@/lib/i18n';
 
 const EMAIL = process.env.NEXT_PUBLIC_COMPANY_EMAIL || 'info@steelmart.in';
@@ -27,12 +28,8 @@ export default function Footer() {
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-2.5 mb-4 group">
-              <div className="w-9 h-9 bg-[#10b981] rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-emerald-500/20 group-hover:scale-110 transition-transform duration-300">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-white dark:text-[#121212]">
-                  <rect x="2" y="3" width="20" height="4" rx="1"/>
-                  <rect x="2" y="17" width="20" height="4" rx="1"/>
-                  <rect x="10" y="7" width="4" height="10" rx="1"/>
-                </svg>
+              <div className="w-10 h-10 relative flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
+                <Image src="/logo.png" alt="Jaishree Jagdambaa Trader LLP" fill className="object-contain" sizes="40px" />
               </div>
               <div className="flex flex-col">
                 <span className="text-foreground font-black text-sm uppercase tracking-tight leading-none">

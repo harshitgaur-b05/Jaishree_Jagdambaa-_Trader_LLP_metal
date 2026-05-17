@@ -8,6 +8,7 @@ import { useEnquiryCart } from '@/components/EnquiryCart';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from '@/lib/i18n';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
+import Image from 'next/image';
 
 const WA_NUMBER = process.env.NEXT_PUBLIC_WA_NUMBER || '919999999999';
 
@@ -28,13 +29,9 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 md:px-8 h-16 flex items-center justify-between gap-4">
         {/* Logo + name */}
         <Link href="/" className="flex items-center gap-2 sm:gap-3 flex-shrink-0 group">
-          {/* Steel beam icon with hover effect */}
-          <div className="w-8 h-8 sm:w-10 sm:h-10 bg-[#10b981] rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-emerald-500/20 group-hover:scale-110 transition-transform duration-300">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 sm:w-5 h-5 text-white dark:text-[#121212]">
-              <rect x="2" y="3" width="20" height="4" rx="1" />
-              <rect x="2" y="17" width="20" height="4" rx="1" />
-              <rect x="10" y="7" width="4" height="10" rx="1" />
-            </svg>
+          {/* Logo image with hover effect */}
+          <div className="w-10 h-10 sm:w-12 sm:h-12 relative flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
+            <Image src="/logo.png" alt="Jaishree Jagdambaa Trader LLP" fill className="object-contain" priority sizes="(max-width: 640px) 40px, 48px" />
           </div>
 
           <div className="flex flex-col">

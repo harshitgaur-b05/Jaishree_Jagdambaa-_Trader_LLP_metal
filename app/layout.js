@@ -26,6 +26,14 @@ export const metadata = {
   openGraph: {
     type: 'website',
     siteName: COMPANY,
+    images: [
+      {
+        url: '/logo.png',
+        width: 800,
+        height: 600,
+        alt: COMPANY,
+      },
+    ],
   },
 };
 
