@@ -78,7 +78,7 @@ export default function HomePage() {
         {/* Background Image & Overlays */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/images/heroimage/unnamed.jpg')" }}
+          style={{ backgroundImage: "url('/images/heroimage/unnamed.png')" }}
         >
           <div className="absolute inset-0 bg-black/40 dark:bg-black/55"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30 dark:from-[#18181b]/60 dark:via-transparent dark:to-[#18181b]/80"></div>
