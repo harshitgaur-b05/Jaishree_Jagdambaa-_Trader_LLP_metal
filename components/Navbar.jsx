@@ -30,8 +30,8 @@ export default function Navbar() {
         {/* Logo + name */}
         <Link href="/" className="flex items-center gap-2 sm:gap-3 flex-shrink-0 group">
           {/* Logo image with hover effect */}
-          <div className="w-10 h-10 sm:w-12 sm:h-12 relative flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
-            <Image src="/logo.png" alt="Jaishree Jagdambaa Trader LLP" fill className="object-contain" priority sizes="(max-width: 640px) 40px, 48px" />
+          <div className="w-14 h-14 sm:w-16 sm:h-16 relative flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
+            <Image src="/logo.png" alt="Jaishree Jagdambaa Trader LLP" fill className="object-contain" priority sizes="(max-width: 640px) 56px, 64px" />
           </div>
 
           <div className="flex flex-col">
